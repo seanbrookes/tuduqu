@@ -258,9 +258,9 @@ http.createServer(app).listen(app.get('port'), function(){
 // operations and release them when the connection is complete.
 	mongoose.connect(dbConString, mongoOptions, function (err, res) {
 		if (err) {
-			console.log ('ERROR connecting to: ' + dbConString + '. ' + err);
+			console.log ('ERROR connecting to : ' + dbConString + '. ' + err);
 		} else {
-			console.log ('Succeeded connected to: ' + dbConString);
+			console.log ('Succeeded connected to : ' + dbConString);
 		}
 	});
 
