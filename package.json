@@ -15,7 +15,8 @@
 		"request":"2.12.x",
 		"bcrypt":"0.7.x",
 		"validator":"0.4.x",
-		"winston":"0.6.x"
+		"winston":"0.6.x",
+		"mongodb" : "1.1.x"
 	},
 	"devDependencies": {
 		"mocha":"1.7.x",
