@@ -260,7 +260,8 @@ http.createServer(app).listen(app.get('port'), function(){
 		if (err) {
 			console.log ('ERROR connecting to : ' + dbConString + '. ' + err);
 		} else {
-			console.log ('Succeeded connected to : ' + dbConString);
+			console.log ('Succeeded connected to : ddddd');
+		//	console.log ('Succeeded connected to : ddddd' + dbConString);
 		}
 	});
 
