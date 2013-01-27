@@ -236,7 +236,7 @@ http.createServer(app).listen(app.get('port'), function(){
 	console.log('|');
 	console.log('|	Initialize Db connection');
 	console.log('|');
-	var constring1 = mongoose.connect('http://' + config.db.host + ':' + config.db.port +'/' + config.db.db,function(err){
+	var constring1 = 'http://' + config.db.host + ':' + config.db.port +'/' + config.db.db;
 	var conString2 = 'mongodb://heroku_app11348892:9dn7rqdmsda7qvto9g8v48ksg@ds049467.mongolab.com:49467/heroku_app11348892';
 	// var dbConnectionString = constring1;
 	var dbConnectionString = conString2;
@@ -276,4 +276,4 @@ http.createServer(app).listen(app.get('port'), function(){
 //	app.use(express.session({
 //		store: Session(mongoStoreConnectionArgs(dbConnection))
 //	}));
-});});
+});
