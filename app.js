@@ -236,11 +236,17 @@ http.createServer(app).listen(app.get('port'), function(){
 	console.log('|');
 	console.log('|	Initialize Db connection');
 	console.log('|');
-	var constring1 = 'http://' + config.db.host + ':' + config.db.port +'/' + config.db.db;
-	var conString2 = 'mongodb://heroku_app11348892:9dn7rqdmsda7qvto9g8v48ksg@ds049467.mongolab.com:49467/heroku_app11348892/';
-	// var dbConnectionString = constring1;
-	var dbConnectionString = conString2;
+	var dbConString;
+//	var constring1 = 'http://' + config.db.host + ':' + config.db.port +'/' + config.db.db;
+//	var conString2 = 'mongodb://heroku_app11348892:9dn7rqdmsda7qvto9g8v48ksg@ds049467.mongolab.com:49467/heroku_app11348892/';
 
+	app.configure('development', function(){
+		dbConString = 'http://' + config.db.host + ':' + config.db.port +'/' + config.db.db;
+
+	});
+	app.configure('production', function(){
+		dbConString = 'mongodb://heroku_app11348892:9dn7rqdmsda7qvto9g8v48ksg@ds049467.mongolab.com:49467/heroku_app11348892/';
+	});
 		var db = mongoose.connect(dbConnectionString ,function(err){
 		console.log('|');
 		if(err){
