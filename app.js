@@ -271,13 +271,14 @@ http.createServer(app).listen(app.get('port'), function(){
 			console.log('|');
 			console.log('|');
 			console.log('--------------------------------');
-			console.log('|	' + dbConString + ' [db] connection error : ' + err);
+			//console.log('|	' + dbConString + ' [db] connection error : ' + err);
+			console.log('|	 [db] connection error : ' + err);
 			console.log('--------------------------------');
 			console.log('|');
 		}
 		else{
 			console.log('|');
-			console.log('|	Connected to db	' + dbConString);
+			console.log('|	Connected to db	');
 			console.log('|');
 			console.log('|');
 		}
