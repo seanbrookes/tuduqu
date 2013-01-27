@@ -234,7 +234,7 @@ http.createServer(app).listen(app.get('port'), function(){
 	console.log("|	" + config.app.friendlyName + " app server listening on port " + app.get('port'));
 	console.log('|');
 	console.log('|');
-	console.log('|	Initialize Db connection');
+	//console.log('|	Initialize Db connection');
 	console.log('|');
 	var dbConString;
 //	var constring1 = 'http://' + config.db.host + ':' + config.db.port +'/' + config.db.db;
@@ -258,34 +258,34 @@ http.createServer(app).listen(app.get('port'), function(){
 // operations and release them when the connection is complete.
 	mongoose.connect(dbConString, mongoOptions, function (err, res) {
 		if (err) {
-			console.log ('ERROR connecting to: ' + uristring + '. ' + err);
+			console.log ('ERROR connecting to: ' + dbConString + '. ' + err);
 		} else {
-			console.log ('Succeeded connected to: ' + uristring);
+			console.log ('Succeeded connected to: ' + dbConString);
 		}
 	});
 
-	var db = mongoose.connect(dbConString ,function(err){
-		console.log('|');
-		if(err){
-			console.log('|');
-			console.log('|');
-			console.log('--------------------------------');
-			console.log('|	' + dbConString + ' [db] connection error : ' + err);
-			console.log('--------------------------------');
-			console.log('|');
-		}
-		else{
-			console.log('|');
-			console.log('|	Connected to db	' + dbConString);
-			console.log('|');
-			console.log('|');
-		}
-		console.log('|==========================================');
-		console.log('|==========================================');
-		console.log('|');
-		console.log('|');
-
-	});
+//	var db = mongoose.connect(dbConString ,function(err){
+//		console.log('|');
+//		if(err){
+//			console.log('|');
+//			console.log('|');
+//			console.log('--------------------------------');
+//			console.log('|	' + dbConString + ' [db] connection error : ' + err);
+//			console.log('--------------------------------');
+//			console.log('|');
+//		}
+//		else{
+//			console.log('|');
+//			console.log('|	Connected to db	' + dbConString);
+//			console.log('|');
+//			console.log('|');
+//		}
+//		console.log('|==========================================');
+//		console.log('|==========================================');
+//		console.log('|');
+//		console.log('|');
+//
+//	});
 //	var dbConnection = db.connections[0];
 //	function mongoStoreConnectionArgs(dbConnection) {
 //		return {
