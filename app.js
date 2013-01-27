@@ -250,6 +250,20 @@ http.createServer(app).listen(app.get('port'), function(){
 	});
 	dbConString = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || 'http://' + config.db.host + ':' + config.db.port +'/' + config.db.db;
 	console.log('dbConnString: ' + dbConString);
+// mongodb://heroku_app11348892:9dn7rqdmsda7qvto9g8v48ksg@ds049467.mongolab.com:49467/heroku_app11348892
+
+	var mongoOptions = { db: { safe: true }};
+
+// Makes connection asynchronously.  Mongoose will queue up database
+// operations and release them when the connection is complete.
+	mongoose.connect(dbConString, mongoOptions, function (err, res) {
+		if (err) {
+			console.log ('ERROR connecting to: ' + uristring + '. ' + err);
+		} else {
+			console.log ('Succeeded connected to: ' + uristring);
+		}
+	});
+
 	var db = mongoose.connect(dbConString ,function(err){
 		console.log('|');
 		if(err){
