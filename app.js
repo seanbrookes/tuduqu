@@ -247,7 +247,7 @@ http.createServer(app).listen(app.get('port'), function(){
 	app.configure('production', function(){
 		dbConString = 'mongodb://heroku_app11348892:9dn7rqdmsda7qvto9g8v48ksg@ds049467.mongolab.com:49467/heroku_app11348892/';
 	});
-		var db = mongoose.connect(dbConnectionString ,function(err){
+		var db = mongoose.connect(dbConString ,function(err){
 		console.log('|');
 		if(err){
 			console.log('|');
