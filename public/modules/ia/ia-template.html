@@ -1,0 +1,38 @@
+<div id="IAModule" class="module-ia-container">
+
+    <!-- Main Navigation Container -->
+    <script type="text/template" id="MainNavTemplate" class="ui-template">
+        <div id="MainNavigation">
+            <ul class="nav-main-list">
+                <% _.each(P.mainNavItems,function(item,key,list){ %>
+                    <% var f = item.name; %><!-- create more variables -->
+                    <li>
+                        <!-- use variables -->
+                        <!--<a href="#"><%= key %></a>-->
+                        <a href="<%= item.href %>"
+                        class="<% _.each(item.cssClasses,function(item,key,list){ %><%= item + ' ' %><% }); %>"
+                        <% _.each(
+                        item.dataAttribs,
+                        function(item,key,list){
+                        %>
+                        data-<%= item.name %>
+                        ="<%= item.value %>"
+                        <% }); %>
+
+                        ><%= item.name %></a>
+                    </li>
+                <% }); %>
+
+
+            </ul>
+        </div>
+    </script>
+
+    <!-- Main Nav Item Template -->
+    <script type="text/template" id="MainNavItemTemplate" class="ui-template">
+        <li class="nav-main-item">
+            <a href="#" class="cmd-main-nav"><%= P.name %></a>
+        </li>
+    </script>
+
+</div>

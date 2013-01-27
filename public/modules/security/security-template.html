@@ -1,0 +1,59 @@
+<!-- Security Templates -->
+<div class="security-module">
+    <div class="security-module-container"></div>
+
+
+
+
+    <!-- Login -->
+    <script type="text/template" id="LoginFormTemplate" class="ui-template">
+        <form name="LoginForm" id="LoginForm" class="form-login"  data-id="<%- P._id%>" method="POST" action="#">
+            <div class="wrapping clearfix">
+                <section class="aligned">
+                    <input type="text" name="Email" id="Email" placeholder="Email Address" autocomplete="off" tabindex="1" class="txtinput">
+                    <input type="password" name="Password" id="Password" placeholder="Password" autocomplete="off" tabindex="1" class="txtinput">
+                </section>
+                <secion class="button-group">
+                    <button class="btn-form btn-login">login</button>
+                </secion>
+            </div>
+        </form>
+    </script>
+
+    <!-- Sign Up -->
+    <script type="text/template" id="SignUpTemplate" class="ui-template">
+        <form name="SignUpForm" id="SignUpForm" class="form-signup"  data-id="<%- P._id%>" action="#" method="POST">
+            <div class="wrapping clearfix">
+                <section class="aligned">
+                    <!--<div class="form-field">-->
+                        <!--<input type="text" name="UserName" id="UserName" placeholder="Name" autocomplete="off" tabindex="1" class="txtinput">-->
+                    <!--</div>-->
+                    <div class="form-field">
+                        <input type="email" name="Email" id="Email" placeholder="Email Address" autocomplete="off" tabindex="1" class="txtinput">
+                    </div>
+                    <div class="form-field">
+                        <input type="password" name="Password" id="Password" placeholder="Password" autocomplete="off" tabindex="1" class="txtinput">
+                    </div>
+                </section>
+                <secion class="button-group">
+                    <button class="btn-form btn-signup">sign up</button>
+                </secion>
+            </div>
+        </form>
+    </script>
+
+    <!-- Forgot Password -->
+    <script type="text/template" id="ForgotPasswordTemplate" class="ui-template">
+        <form name="ForgotPasswordForm" id="ForgotPasswordForm"  data-id="<%- P._id%>" method="post" action="#">
+            <div class="wrapping clearfix">
+                <section class="aligned">
+                    <input type="email" name="EmailAddress" id="EmailAddress" placeholder="Email Address" autocomplete="off" tabindex="1" class="txtinput">
+                </section>
+                <secion class="button-group">
+                    <button class="btn-form btn-forgot-password">send password</button>
+                </secion>
+            </div>
+        </form>
+    </script>
+
+</div>

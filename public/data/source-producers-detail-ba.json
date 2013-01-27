@@ -1,0 +1,1272 @@
+{
+    "data":[
+        {
+            "name":"AB Integrated Solutions Inc.",
+            "addresses":[{
+                "street":[
+                    "#5 - 1500 Railway St."
+                ],
+                "city":"North Vancouver",
+                "stateProv":"BC",
+                "postalZip":"V7J 2B1"
+            }],
+            "contact":{
+                "name":"Andrew Small",
+                "tel": "(604) 980-3999",
+                "fax": "(604) 980-3990",
+                "email":"asmall@abisolutions.ca"
+            },
+            "produces":[
+                "Dry / milled spices",
+                "vegetables",
+                "fruit"
+            ],
+            "classification":["producer"],
+            "status":"certified"
+        },
+        {
+            "name":"Agrifoods International Cooperative Ltd",
+            "addresses":[{
+                "street":["#14-34368 Manufacturers Way"],
+                "city":"Abbotsford",
+                "stateProv":"BC",
+                "postalZip":"V2S 7M1"
+            }],
+            "contact":{
+                "name":"Brian Hopfner",
+                "tel":"(604) 755-4111"
+            },
+            "produces":[
+                "Milk transporter"
+            ],
+            "classification":["Handler"],
+            "status":"Certified"
+        },
+        {
+            "name":"Agropur, Div Natrel (DBA - Island Farms)"
+        },
+        {
+            "name":"All Seasons Mushrooms Inc",
+            "addresses":[
+               {
+                    "street":["3392 - 224th Street"],
+                    "city":"Langley",
+                    "stateProv":"BC",
+                    "postalZip":"V4W 1G8"
+                },
+                {
+                    "street":["38050 Atkinson Road"],
+                    "city":"Abbotsford",
+                    "stateProv":"BC",
+                    "postalZip":"V3G 2G8"
+                }
+            ],
+            "contact":{
+                    "name":"Frank Moscone or Patrick Moscone",
+                    "tel":"(604) 534-0278",
+                    "fax":"(604) 534-0218",
+                    "email":"pat@allseasonsmushrooms.com",
+                    "website":"www.allseasonsmushrooms.com"
+            },
+            "produces":[
+                "Portabella Mushrooms", "Crimini Mushrooms", "White Button Mushrooms", "Shiitake Mushrooms", "Enoki Mushrooms"
+            ],
+            "classification":[
+                "Producer",
+                "Processor",
+                "Handler"
+            ],
+            "status":"Certified"
+        },
+        {
+            "name":"Asia Pacific Farm Enterprises Inc.",
+            "address":[{
+                "street":["3577 - 268 Street"],
+                "city":"Aldergrove",
+                "stateProv":"BC",
+                "postalZip":"V4W 3G8"
+            }],
+            "contact":{
+                "name":"Jules Hou",
+                "tel":"(604) 856-8558",
+                "fax":"(604) 856-6989",
+                "email":"farm@apforganic.com"
+            }
+            "produces":[
+                "King Mushrooms", "Pompom Mushrooms", "Oyster Mushrooms", "Reshi Mushrooms", "Shiitake Mushrooms", "Enoki Mushrooms"
+            ],
+            "classification":[
+                "Producer"
+            ],
+            "status":"Certified"
+        },
+        {
+            "name":"Athwal Farm",
+            "addresses":[{
+                "street":["13300 Blundell Rd"],
+                "city":"Richmond",
+                "stateProv":"BC",
+                "postalZip":"V6W 1B5"
+            }],
+            "contact":{
+                "name":"Kesar Athwal",
+                "tel":"(604) 278-1603",
+                "fax":"(778) 858-3607",
+                "email":"tsathwal@email.com"
+            },
+            "produces":["Blueberries"],
+            "classification":[
+                "Producer"
+            ],
+            "status":"Certified"
+        },
+        {
+            "name":"Basil Olive Oil Products Ltd.",
+            "addresses":[{
+                "street":["18939 - 120B Avenue"],
+                "city":"Pitt Meadows",
+                "stateProv":"BC",
+                "postalZip":"V3Y 1W3"
+            }],
+            "contact":{
+                "name":"Helen & Basil Koutalianos",
+                "tel":"(604) 460-0087",
+                "fax":"(604) 465-7594",
+                "email":"sales@basiloliveoil.com",
+                "website":"www.basiloliveoil.com"
+            },
+            "produces":["Olive Oils", "Olives", "Raisins", "Vinegars", "Honey","Soap"],
+            "classification":[
+                "Producer"
+            ],
+            "status":"Certified"
+        },
+        {
+            "name":"Bateman Berry Farm",
+            "addresses":[{
+                "street":["34488 Bateman Road"],
+                "city":"Abbotsford",
+                "stateProv":"BC",
+                "postalZip":"V2S 7Y8"
+            }],
+            "contact":{
+                "name":"Parm or Simram Bains",
+                "tel":"(604) 850-0377",
+                "fax":"(604) 855-1625",
+                "email":"parm@westberryfarms.com"
+            },
+            "produces":["Blueberries"],
+            "classification":[
+                "Producer"
+            ],
+            "status":"Certified and T3"
+        },
+        {
+            "name":"BC Fresh Inc",
+            "addresses":[{
+                "street":["4363 King Street"],
+                "city":"Delta",
+                "stateProv":"BC",
+                "postalZip":"V4K0A5"
+            }],
+            "contact":{
+                "name":"Murray Driediger",
+                "tel":"(604) 946-3139",
+                "fax":"(604) 946-2924",
+                "email":"murray@bcfreshinc.com"
+            },
+            "produces":["Potatoes", "Beets"],
+            "classification":[
+                "Handling","Distribution"
+            ],
+            "status":"Certified"
+        },
+        {
+            "name":"Best Gourmet Coffee Wholesalers",
+            "addresses":[{
+                "street":["20091-113B Ave"],
+                "city":"Maple Ridge",
+                "stateProv":"BC",
+                "postalZip":"V2X 0Z2"
+            }],
+            "contact":{
+                "name":"Seth Lang - Assistant General Manager or Mike Li - General Manager",
+                "tel":"604-465-5112",
+                "email":"seth.lang@bestgourmet.ca",
+                "website":"www.bestgourmet.com"
+            },
+            "produces":["Coffee Roasting"],
+            "classification":[
+                "Processor"
+            ],
+            "status":"Pending"
+        },
+        {
+            "name":"Bevo Farms Ltd",
+            "addresses":[{
+                "street":["7170 Glover Road"],
+                "city":"Milner",
+                "stateProv":"BC",
+                "postalZip":"V0X1T0"
+            }],
+            "contact":{
+                "name":"Leo Benne",
+                "tel":"(604) 888-0420",
+                "email":"leobenne@bevofarms.com",
+                "website":"www.bevofarms.com"
+            },
+            "produces":["Tomatoes", "Peppers", "Cucumbers", "Eggplant"],
+            "classification":[
+                "Producer"
+            ],
+            "status":"Certified"
+        },
+        {
+            "name":"Beaver Meadow Farms Ltd",
+            "addresses":[{
+                "street":["1821-E Anderton Road"],
+                "city":"Comox",
+                "stateProv":"BC",
+                "postalZip":"V9M 4B1"
+            }],
+            "contact":{
+                "name":"Edgar Smith",
+                "tel":"(250) 339-2913",
+                "fax":"(250) 339-4057",
+                "email":"edgar.ravensnook@telus.net"
+
+            },
+            "produces":["Dairy Herd", "Beef Herd", "Hay", "Silage"],
+            "classification":[
+                "Producer"
+            ],
+            "status":"Certified"
+        },
+        {
+            "name":"Blue Ridge Ranch",
+            "addresses":[{
+                "city":"Lillooet",
+                "stateProv":"BC",
+                "postalZip":"V0K 1V0"
+            }],
+            "contact":{
+                "name":"George Mitchell",
+                "tel":"(250) 483-7704",
+                "email":"blueridge_ranch@hotmail.com"
+            },
+            "produces":["Hay"],
+            "classification":[
+                "Producer"
+            ],
+            "status":"Certified"
+        },
+        {
+            "name":"Blueberry Valley Estates",
+            "addresses":[{
+                "street":["16351 Aquilini Avenue"],
+                "city":"Pitt Meadows",
+                "stateProv":"BC"
+            }],
+            "contact":{
+                "tel":"(604) 465-7555",
+                "fax":"(604) 460-0944"
+            },
+            "produces":["Blueberries"],
+            "classification":[
+                "Producer"
+            ],
+            "status":"Certified & Transitional T3"
+        },
+        {
+            "name":"Bose Farm",
+            "addresses":[{
+                "street":["16430 - 64th Ave."],
+                "city":"Surrey",
+                "stateProv":"BC",
+                "postalZip":"V3S 3V5"
+            }],
+            "contact":{
+                "name":"Ken Bose",
+                "tel":"(604) 576-6338",
+                "email":"kbose@telus.net"
+            },
+            "produces":["Mixed Vegetables & Grains"],
+            "classification":[
+                "Producer"
+            ],
+            "status":"Certified"
+        },
+        {
+            "name":"Bradner Farms",
+            "addresses":[{
+                "street":["28670 - 58th Ave."],
+                "city":"Abbotsford",
+                "stateProv":"BC",
+                "postalZip":"V4X 2E8"
+            }],
+            "contact":{
+                "name":"Rob Donaldson",
+                "tel":"(604) 856 -1227",
+                "fax":"(604) 856-1341",
+                "email":"bradnerfarms@shaw.ca"
+            },
+            "produces":["Dairy herd", "Broiler Chickens", "Eggs", "Milk", "Feed mill", "Hay", "Silage", "Pasture"],
+            "classification":[
+                "Producer", "Processor", "Handler"
+            ],
+            "status":"Certified & T3"
+        },
+        {
+            "name":"Bradner Milk Transport Ltd",
+            "addresses":[{
+                "street":["1356 Sumas Way"],
+                "city":"Abbotsford",
+                "stateProv":"BC",
+                "postalZip":"V2S 8H2"
+            }],
+            "contact":{
+                "name":"Matt de Haan",
+                "tel":"(604) 557-5489",
+                "fax":"(604) 557-1480",
+                "website":"www.nutrivagroup.com"
+            },
+            "produces":["Milk Transporter"],
+            "classification":[
+                "Handler"
+            ],
+            "status":"Certified"
+        },
+        {
+            "name":"Brandy Farms Inc and Cozy Prairie Farm",
+            "addresses":[{
+                "street":["4063 Interprovincial Hwy."],
+                "city":"Abbotsford",
+                "stateProv":"BC",
+                "postalZip":"V3G 2P3"
+            }],
+            "contact":{
+                "name":"Ben Brandsema or Julie Evans",
+                "tel":"(604) 852-4076",
+                "fax":"(604) 850-7888"
+            },
+            "produces":["Dairy Herd", "Milk", "Breeding Cows", "Hay", "Pasture", "Feed Mill"],
+            "classification":[
+                "Producer"
+            ],
+            "status":"Certified and T3"
+        },
+        {
+            "name":"Champs Mushrooms Inc",
+            "addresses":[{
+                "street":["3151 260th Street"],
+                "city":"Aldergrove",
+                "stateProv":"BC"
+            }],
+            "contact":{
+                "name":"Duke Tran or Sergio Olano",
+                "tel":"(604) 607-0789",
+                "fax":"(604) 607-0787",
+                "email":"sao@champsmushrooms.ca"
+            },
+            "produces":["Shiitake Mushrooms", "Portabella Mushrooms", "Oyster Mushrooms", "brown and white button Mushrooms"],
+            "classification":[
+                "Handler"
+            ],
+            "status":"Certified"
+        },
+        {
+            "name":"Cherry Meadows Farm",
+            "addresses":[{
+                "city":"Bonnington",
+                "stateProv":"BC"
+            }],
+            "produces":["Vegetable Seed", "Herb Seed", "Parsley", "Chives", "Dill", "Hot peppers", "Basil", "Cherries", "Raspberries", "Strawberries", "Rhubarb"],
+            "classification":[
+                "Producer"
+            ],
+            "status":"Certified"
+        },
+        {
+            "name":"Clearbrook Coffee Company",
+            "addresses":[{
+                "street":["32195 King Road"],
+                "city":"Abbotsford",
+                "stateProv":"BC",
+                "postalZip":"V2T5Z4"
+            }],
+            "contact":{
+                "name":"Nathan Prachnau & Joshua Isaak",
+                "tel":"604-853-6727",
+                "email":"Nathan@clearbrookcoffee.com"
+            },
+            "produces":["Coffee Roasting"],
+            "classification":[
+                "Processor"
+            ],
+            "status":"Certified"
+        },
+        {
+            "name":"Country Fresh Enterprises Inc.",
+            "addresses":[{
+                "street":["#170-2540 Simpson Road"],
+                "city":"Richmond",
+                "stateProv":"BC",
+                "postalZip":"V6X 2P9"
+            }],
+            "contact":{
+                "name":"Paul Dhanoa or Peter Szerencsi",
+                "tel":"(604) 276-2029",
+                "fax":"(604) 276-2079",
+            },
+            "produces":["Nut and Seed Butters", "Sprouted Wheat and Rye Bread", "Granola"],
+            "classification":[
+                "Processor"
+            ],
+            "status":"Certified"
+        },
+        {
+            "name":"Foley\'s Candies Ltd",
+            "addresses":[{
+                "street":["12671 No 5 Road"],
+                "city":"Richmond",
+                "stateProv":"BC",
+                "postalZip":"V7A 4E9"
+            }],
+            "contact":{
+                "name":"Haines Lee",
+                "tel":"(604) 274-2131",
+                "email":"haines@foleyscandies.com",
+                "website":"www.foleyschocolates.ca"
+            },
+            "produces":["Dark Chocolate covered Almonds", "Cherries" , "Cranberries", "Milk Chocolate covered Almonds", "Cashews", "Blueberries"],
+            "classification":[
+                "Processor"
+            ],
+            "status":"Certified"
+        },
+        {
+            "name":"Formosa Nursery Co. Ltd.",
+            "addresses":[{
+                "street":["12617 – 203 Street"],
+                "city":"Maple Ridge",
+                "stateProv":"BC",
+                "postalZip":"V2X 4A1"
+            }],
+            "contact":{
+                "name":"Ting Wu",
+                "tel":"(604) 465-3359",
+                "fax":"(604) 465-3268",
+                "website":"www.formosanursery.com"
+            },
+            "produces":["Blueberries", "strawberries", "raspberries", "gooseberries", "currants", "cherries", "grapes", "paw paw", "persimmons", "apples", "plums", "pears", "pasture", "forage", "hay"],
+            "classification":[
+                "Producer"
+            ],
+            "status":"Certified"
+        },
+        {
+            "name":"Friendship Specialty Mushroom Ltd.",
+            "addresses":[{
+                "street":["8110 Upper Prairie Road"],
+                "city":"Chilliwack",
+                "stateProv":"BC",
+                "postalZip":"V2P 6H3"
+            }],
+            "contact":{
+                "name":"Renee Du",
+                "tel":"(604) 794-9819",
+                "fax":"(604) 794-9819",
+                "website":"www.friendshipmushroom.com"
+            },
+            "produces":["Oyster Mushrooms"],
+            "classification":[
+                "Producer"
+            ],
+            "status":"Certified"
+        },
+        {
+            "name":"Golden Eagle Processor",
+            "addresses":[{
+                "street":["16351 Aquilini Ave."],
+                "city":"Pitt Meadows",
+                "stateProv":"BC",
+                "postalZip":"V3Y 1Z1"
+            }],
+            "contact":{
+                "name":"Kanwaljit Sokhi",
+                "tel":"(604) 465-7555 ext. 106",
+                "fax":"(604) 465-7205",
+                "website":"www.geberries.com"
+            },
+            "produces":["Blueberries"],
+            "classification":[
+                "Processor"
+            ],
+            "status":"Certified"
+        },
+        {
+            "name":"Great Pacific BioProducts Ltd",
+            "addresses":[{
+                "street":["7963 Webster Rd"],
+                "city":"Delta",
+                "stateProv":"BC",
+                "postalZip":"V4G 1E4"
+            }],
+            "contact":{
+                "name":"Michael Renwick",
+                "tel":"(604) 952-4333",
+                "fax":"(604) 952-4334",
+                "website":"www.greatpacificbioproducts.com"
+            },
+            "produces":["Liquid Organic fresh fish fertilizer / soil enhancer"],
+            "classification":[
+                "Associate Member"
+            ]
+        },
+        {
+            "name":"HapiFoods Group Inc",
+            "addresses":[{
+                "street":["1161 Hwy 101"],
+                "city":"Gibsons",
+                "stateProv":"BC"
+            }],
+            "contact":{
+                "name":"Rob MacNeil",
+                "tel":"(604) 886-8860",
+                "fax":"(604) 885-8435",
+                "email":"rob@holycrap.ca",
+                "website":"www.Holycrap.ca"
+            },
+            "produces":["Ready to eat breakfast cereals"],
+            "classification":[
+                "Processor"
+            ],
+            "status":"Certified"
+        },
+        {
+            "name":"Houweling Nurseries Ltd",
+            "produces":["Tomato seedlings", "Pepper seedlings", "Cucumber seedlings"],
+            "status":"Certified"
+        },
+        {
+            "name":"Hui\'s Farm Ltd.",
+            "addresses":[{
+                "street":["5268 - 248th St"],
+                "city":"Aldergrove",
+                "stateProv":"BC",
+                "postalZip":"V4W 1A7"
+            }],
+            "contact":{
+                "name":"Tsun Yuan Lee",
+                "tel":"(604) 856-4758",
+                "fax":"(604) 856-4758",
+                "website":"www.huisfarmbc.ca"
+            },
+            "produces":["Mushrooms"],
+            "classification":[
+                "Producer"
+            ],
+            "status":"Certified"
+        },
+        {
+            "name":"JJ Bean Inc.",
+            "addresses":[{
+                "street":["1904 Powell Street"],
+                "city":"Vancouver",
+                "stateProv":"BC",
+                "postalZip":"V5L 1J3"
+            }],
+            "contact":{
+                "name":"Carla Froese and David Long",
+                "tel":"(604) 254-0161",
+                "fax":"(604) 254-5004",
+                "website":"www.jjbeancoffee.com"
+            },
+            "produces":["Coffee", "Tea"],
+            "classification":[
+                "Processor"
+            ],
+            "status":"Certified"
+        },
+        {
+            "name":"MC Dairy",
+            "produces":["Silage", "Hay"],
+            "classification":[
+                "Producer"
+            ],
+            "status":"Certified"
+        },
+        {
+            "name":"Maarhuis Dairy",
+            "addresses":[{
+                "street":["49309 Chilliwack Central"],
+                "city":"Chilliwack",
+                "stateProv":"BC",
+                "postalZip":"V2P 6H3"
+            }],
+            "contact":{
+                "name":"Calvin Maarhuis",
+                "tel":"(604) 794-5990",
+                "fax":"(604) 794-5990"
+            },
+            "produces":["Dairy Herd"],
+            "classification":[
+                "Producer"
+            ],
+            "status":"Certified Hay and Silage and Certified Dairy Herd and Milk"
+        },
+        {
+            "name":"Missing Goat Blueberry Farm",
+            "addresses":[{
+                "street":["17318 32nd Ave."],
+                "city":"Surrey",
+                "stateProv":"BC",
+                "postalZip":"V3S 0L5"
+            }],
+            "contact":{
+                "name":"Heather Cameron",
+                "tel":"(604) 538-1443",
+                "website":"www.missinggoat.com"
+            },
+            "produces":["Blueberries", "Raspberries", "Lavender", "Herbs", "Jams", "Syrups"],
+            "classification":[
+                "Producer",
+                "Processing"
+            ],
+            "status":"Certified"
+        },
+        {
+            "name":"Misty Mountain Mushrooms",
+            "addresses":[{
+                "street":["30 - 13900 Maycrest Way"],
+                "city":"Richmond",
+                "stateProv":"BC",
+                "postalZip":"V6V 3E2"
+            }],
+            "contact":{
+                "name":"David Lee Kwen",
+                "tel":"(604) 273-8299",
+                "fax":"(604) 273-8124"
+            },
+            "produces":["Mushrooms"],
+            "classification":[
+                "Producer"
+            ],
+            "status":"Certified"
+        },
+        {
+            "name":"Nature Glen Dairy",
+            "addresses":[{
+                "street":["27336 River Road"],
+                "city":"Abbotsford",
+                "stateProv":"BC",
+                "postalZip":"V3G 2P3"
+            }],
+            "contact":{
+                "name":"Ben Brandsema or Trudy Bouwman",
+                "tel":"(604) 855-6479",
+                "fax":"",
+                "email":"",
+                "website":""
+            },
+            "produces":["Dairy Herd", "Milk", "Breeding Cows", "Hay", "Pasture"],
+            "classification":[
+                "Producer"
+            ],
+            "status":"Certified and Transitional T1 & T3"
+        },
+        {
+            "name":"Nicomekl Farm",
+            "addresses":[{
+                "street":["4764 -184th Street"],
+                "city":"Surrey",
+                "stateProv":"BC",
+                "postalZip":"V3S 0L5"
+            }],
+            "contact":{
+                "name":"David Janssens",
+                "tel":"(604) 576-6874",
+                "fax":"(604) 576-6860",
+                "email":"",
+                "website":""
+            },
+            "produces":["Silage corn", "grass", "hay", "Dairy Herd", "milk"],
+            "classification":[
+                "Producer"
+            ],
+            "status":"Certified"
+        },
+        {
+            "name":"Noble Organics",
+            "produces":["Fir Trees"],
+            "status":"T3"
+        },
+        {
+            "name":"Olympic Dairy Products Ltd.",
+            "addresses":[{
+                "street":["7178 Vantage Way"],
+                "city":"Delta",
+                "stateProv":"BC",
+                "postalZip":"V4G 1K7"
+            }],
+            "contact":{
+                "name":"Doug Luder",
+                "tel":"(604) 952-7078",
+                "fax":"(604) 952-7077",
+                "website":"www.olympicdairy.com"
+            },
+            "produces":["Milk", "Yogurt", "Sour Cream", "Cream Cheese"],
+            "classification":[
+                "Processor"
+            ],
+            "status":"Certified"
+        },
+        {
+            "name":"Origin Organic Farms Inc",
+            "addresses":[
+                {
+                    "street":["21333  48th Ave"],
+                    "city":"Langley",
+                    "stateProv":"BC",
+                    "postalZip":"V3A 3M6"
+                },
+                {
+                    "street":["6225  34B Street"],
+                    "city":"Delta",
+                    "stateProv":"BC",
+                    "postalZip":"V4L2N8"
+                }
+            ],
+            "contact":{
+                "name":"Raymond Wong",
+                "tel":"(604)940-3928",
+                "email":"info@origino.ca",
+                "website":"www.orgino.ca"
+            },
+            "produces":["Tomatoes", "Peppers", "Cucumbers"],
+            "classification":[
+                "Producer",
+                "Processing"
+            ],
+            "status":"Certified"
+        },
+        {
+            "name":"Pacific Valley Produce",
+            "addresses":[{
+                "street":["3151 260th Street"],
+                "city":"Aldergrove",
+                "stateProv":"BC",
+                "postalZip":"V4W 2Z6"
+            }],
+            "contact":{
+                "name":"Sergio Olano",
+                "tel":"(604) 607-0789",
+                "fax":"(604) 309-7197",
+                "email":"sao@champsmushrooms.ca",
+            },
+            "produces":["Agaricus Mushrooms"," Brown Mushrooms", "Portabella Mushrooms"],
+            "classification":[
+                "Producer"
+            ],
+            "status":"Pending"
+        },
+        {
+            "name":"Prospector Organics",
+            "addresses":[{
+                "street":["3555 Old Clayburn Rd"],
+                "city":"Abbotsford",
+                "stateProv":"BC",
+                "postalZip":"V2S7H5"
+            }],
+            "contact":{
+                "name":"Brad Nedimovich",
+                "tel":"(604) 309-4131",
+            },
+            "produces":["Blueberries"],
+            "classification":[
+                "Producer"
+            ],
+            "status":"Certified"
+        },
+        {
+            "name":"Richmond Specialty Mushrooms",
+            "addresses":[{
+                "street":["26227 - 62nd Avenue"],
+                "city":"Aldergrove",
+                "stateProv":"BC",
+                "postalZip":"V4W 1L8"
+            }],
+            "contact":{
+                "name":"Peter Graystone",
+                "tel":"(604) 857-8959",
+                "fax":"(604) 857-2726",
+                "email":"",
+                "website":""
+            },
+            "produces":["Specialty Mushrooms"],
+            "classification":[
+                "Producer",
+                "Handler"
+            ],
+            "status":"Certified"
+        },
+        {
+            "name":"Roots Organic Inc",
+            "addresses":[
+                {
+                    "street":["3585 - 184th Street"],
+                    "city":"Surrey",
+                    "stateProv":"BC",
+                    "postalZip":"V3S 0L5"
+                },
+                {
+                    "street":["3727 184th St"],
+                    "city":"Surrey",
+                    "stateProv":"BC"
+                }
+            ],
+            "contact":{
+                "name":"TJ Brar",
+                "tel":"(604) 576-2567 / (877) 437-2746",
+                "fax":"(604) 576-8945",
+                "website":"www.rootsorganics.com"
+            },
+            "produces":["Herbs", "Edible Flowers", "Vegetables"],
+            "classification":[
+                "Producer",
+                "Processor"
+            ],
+            "status":"Certified"
+        },
+        {
+            "name":"Rossdown Natural Foods",
+            "addresses":[{
+                "street":["2325 Bradner Road"],
+                "city":"Abbotsford",
+                "stateProv":"BC"
+            }],
+            "contact":{
+                "name":"Pat Wiebe",
+                "tel":"(604) 856-6698",
+                "fax":"(604) 856-6909",
+                "email":"",
+                "website":""
+            },
+            "produces":["Slaughter", "Cutting and Packaging of Turkey & Broilers"],
+            "classification":[
+                "Processor"
+            ],
+            "status":"Certified"
+        },
+        {
+            "name":"Saltspring Exotic Mushrooms",
+            "addresses":[{
+                "street":["150 Suffolk Rd"],
+                "city":"Saltspring Island",
+                "stateProv":"BC",
+                "postalZip":"V8K1L8"
+            }],
+            "contact":{
+                "name":"Adam Gold",
+                "tel":"250-931-2220",
+                "fax":"",
+                "email":"sprouts@mail.com",
+                "website":""
+            },
+            "produces":["Reishi & Shiitake Mushrooms"],
+            "classification":[
+                "Producer"
+            ],
+            "status":"Certified"
+        },
+        {
+            "name":"Silverking Soya Foods",
+            "addresses":[{
+                "street":["508 C Latimer Street"],
+                "city":"Nelson",
+                "stateProv":"BC",
+                "postalZip":""
+            }],
+            "contact":{
+                "name":"Jeff Mock",
+                "tel":"(250) 352-5897",
+                "fax":"(250) 352-5893",
+                "email":"renejeff@netidea.com"
+            },
+            "produces":["Organic Tofu"],
+            "classification":[
+                "Processor"
+            ],
+            "status":"Certified"
+        },
+        {
+            "name":"Snow Farms",
+            "addresses":[{
+                "street":["3531 – 64th Street"],
+                "city":"Delta",
+                "stateProv":"BC",
+                "postalZip":"V4K 3N2"
+            }],
+            "contact":{
+                "name":"Harvie & Susan Snow",
+                "tel":"(778) 434-5031",
+                "fax":"778-434-5032",
+                "email":"",
+                "website":""
+            },
+            "produces":["Vegetables", "herbs", "Subscription Box Program"],
+            "classification":[
+                "Producer"
+            ],
+            "status":"Certified"
+        },
+        {
+            "name":"Sumas Mountain Farms",
+            "addresses":[
+                {
+                    "street":["37810 Dawson Road"],
+                    "city":"Abbotsford",
+                    "stateProv":"BC"
+                },
+                {
+                    "street":["380-151 -23500 South Fraser Way"],
+                    "city":"Abbotsford",
+                    "stateProv":"BC",
+                    "postalZip":"V2T4W1"
+                }
+            ],
+            "contact":{
+                "name":"Trevor Newton",
+                "tel":"(604) 608-5423",
+                "website":"www.sumasmountainfarms.ca"
+            },
+            "produces":["Pasture", "Cattle", "Layers and Broilers", "Pork", "Turkey" ,"Beef", "Fruits", "Berries", "Maple Syrup"],
+            "classification":[
+                "Producer",
+                "Handler"
+            ],
+            "status":"Certified"
+        },
+        {
+            "name":"T. E. Produce",
+            "addresses":[{
+                "street":["3622 - 232 Street"],
+                "city":"Langley",
+                "stateProv":"BC",
+                "postalZip":"V2Z ZH4"
+            }],
+            "contact":{
+                "name":"Tuan Pham",
+                "tel":"(604) 532-0988",
+                "fax":"(604) 532-0988",
+                "email":"tobyph@live.ca",
+                "website":""
+            },
+            "produces":["Oyster Mushrooms", "Shiitake Mushrooms"],
+            "classification":[
+                "Producer"
+            ],
+            "status":"Certified"
+        },
+        {
+            "name":"Terpsma Farms Ltd",
+            "addresses":[{
+                "street":["4480 -88th Street"],
+                "city":"Delta",
+                "stateProv":"BC",
+                "postalZip":"V4K3N2"
+            }],
+            "contact":{
+                "name":"David Terpsma (Jr)",
+                "tel":"(604) 946-5129",
+                "fax":"(604) 946-1008",
+                "email":"teradavid@hotmail.com"
+            },
+            "produces":["Pasture"],
+            "classification":[
+                "Producer"
+            ],
+            "status":"T3"
+        },
+        {
+            "name":"The Chai Company Inc.",
+            "addresses":[{
+                "street":["1-8005 Alexander Road"],
+                "city":"Delta",
+                "stateProv":"BC",
+                "postalZip":"V4G 1C6"
+            }],
+            "contact":{
+                "name":"Christopher Merry & Jonathon Markam",
+                "tel":"(604) 940-9887",
+                "fax":"(604) 940-9881",
+                "website":"http://www.chaico.com"
+            },
+            "produces":["Chai Tea Concentrate"],
+            "classification":[
+                "Processor"
+            ],
+            "status":"Certified"
+        },
+        {
+            "name":"Thomas Fresh Inc",
+            "addresses":[{
+                "street":["109 - 2365 192 Street"],
+                "city":"Surrey",
+                "stateProv":"BC",
+                "postalZip":"V3S 3X2"
+            }],
+            "contact":{
+                "name":"Penny Davis",
+                "tel":"(604) 535-1616",
+                "fax":"(604) 535-1615",
+                "email":"pennyd@thomasfresh.com"
+            },
+            "produces":["Vegetables", " Fruits"],
+            "classification":[
+                "Handler"
+            ],
+            "status":"Certified"
+        },
+        {
+            "name":"Two EE\'s Organics",
+            "addresses":[{
+                "street":["18105  88th Ave"],
+                "city":"Surrey",
+                "stateProv":"BC",
+                "postalZip":"V4N 6E8"
+            }],
+            "contact":{
+                "name":"Mike Schoen",
+                "tel":"(604) 835-3569",
+                "fax":"(604) 572-1873",
+                "website":"http://www.wegroworganic.ca"
+            },
+            "produces":["Vegetables", "herbs"],
+            "classification":[
+                "Producer"
+            ],
+            "status":"Certified"
+        },
+        {
+            "name":"Van Rice Products Ltd.",
+            "addresses":[{
+                "street":["#8 - 1350 Valmont Way"],
+                "city":"Richmond",
+                "stateProv":"BC",
+                "postalZip":"V6V 1Y4"
+            }],
+            "contact":{
+                "name":"Ken Takagaki",
+                "tel":"(604) 273-8038",
+                "fax":"(604) 273-7324"
+            },
+            "produces":["Organic Rice Cakes"],
+            "classification":[
+                "Processor"
+            ],
+            "status":"Certified"
+        },
+        {
+            "name":"Walters Exotic Meats Ltd.",
+            "produces":["Chicken"],
+            "classification":[
+                "Processor"
+            ],
+            "status":"Certified"
+        },
+        {
+            "name":"Wellbrook Farm",
+            "addresses":[{
+                "street":["4626 - 88th Ave"],
+                "city":"Delta",
+                "stateProv":"BC",
+                "postalZip":"V4K 3N3"
+            }],
+            "contact":{
+                "name":"Terry Bremner",
+                "tel":"(604) 940-1375",
+                "fax":"(604) 940-1385",
+                "website":"www.wellbrookwinery.com"
+            },
+            "produces":["Blueberries", "hay"],
+            "classification":[
+                "Producer"
+            ],
+            "status":"Certified"
+        },
+        {
+            "name":"Wendel\'s True Foods",
+            "addresses":[{
+                "street":["Unit C - 20243 62nd Ave,"],
+                "city":"Langley",
+                "stateProv":"BC",
+                "postalZip":"V3A 5E6"
+            }],
+            "contact":{
+                "name":"Diane Morrison",
+                "tel":"(604) 539-2238",
+                "fax":"(604) 539-2237",
+                "email":"diane@wendelsonline.com",
+                "website":"www.wendelstruefoods.com"
+            },
+            "produces":["Baked Cookies"],
+            "classification":[
+                "Processing"
+            ],
+            "status":"Certified"
+        },
+        {
+            "name":"Westberry Processing",
+            "addresses":[
+                {
+                    "street":["34486 Clayburn Road"],
+                    "city":"Abbotsford",
+                    "stateProv":"BC",
+                    "postalZip":"V2S 7Y8"
+                },
+                {
+                    "street":["334488 Bateman Rd"],
+                    "city":"Abbotsford",
+                    "stateProv":"BC",
+                    "postalZip":"V2S 7Y8"
+                }
+            ],
+            "contact":{
+                "name":"Parm Bains, Simran Bains",
+                "tel":"(604) 850-0377",
+                "fax":"(604) 855-1625",
+                "email":"parm@westberryfarms.com",
+                "website":""
+            },
+            "produces":["Blueberries"],
+            "classification":[
+                "Processor",
+                "Handling"
+            ],
+            "status":"Certified"
+        },
+        {
+            "name":"Whitecap Mushroom Farm Ltd",
+            "addresses":[{
+                "street":["38061 Atkinson Rd"],
+                "city":"Abbotsford",
+                "stateProv":"BC",
+                "postalZip":"V3G 2G6"
+            }],
+            "contact":{
+                "name":"",
+                "tel":"",
+                "fax":"",
+                "email":"",
+                "website":""
+            },
+            "produces":["Mushrooms"],
+            "classification":[
+                "Producer",
+                "Processor",
+                "Handler"
+            ],
+            "status":"Certified"
+        },
+        {
+            "name":"Wingtat Game Bird Packers Inc.",
+            "addresses":[
+                {
+                    "street":["9752-186th Street"],
+                    "city":"Surrey",
+                    "stateProv":"BC",
+                    "postalZip":"V4N 3N7"
+                },
+                {
+                    "street":["11951 Forge Place"],
+                    "city":"Richmond",
+                    "stateProv":"BC",
+                    "postalZip":"V7A 4V9"
+                }
+            ],
+            "contact":{
+                "name":"Eric Ng",
+                "tel":"(604) 882-0054 (Surrey) (604) 277-4456 (Richmond)",
+                "fax":"",
+                "email":"",
+                "website":""
+            },
+            "produces":["Slaughter, Processing and Packaging of Chicken"],
+            "classification":[
+                "Producer"
+            ],
+            "status":"Certified"
+        },
+        {
+            "name":"",
+            "addresses":[{
+                "street":[""],
+                "city":"",
+                "stateProv":"BC",
+                "postalZip":""
+            }],
+            "contact":{
+                "name":"",
+                "tel":"",
+                "fax":"",
+                "email":"",
+                "website":""
+            },
+            "produces":[""],
+            "classification":[
+                "Producer"
+            ],
+            "status":"Certified"
+        },
+
+
+        {
+            "name":"",
+            "addresses":[{
+                "street":[""],
+                "city":"",
+                "stateProv":"BC",
+                "postalZip":""
+            }],
+            "contact":{
+                "name":"",
+                "tel":"",
+                "fax":"",
+                "email":"",
+                "website":""
+            },
+            "produces":[""],
+            "classification":[
+                "Producer"
+            ],
+            "status":"Certified"
+        },
+        {
+            "name":"",
+            "addresses":[{
+                "street":[""],
+                "city":"",
+                "stateProv":"BC",
+                "postalZip":""
+            }],
+            "contact":{
+                "name":"",
+                "tel":"",
+                "fax":"",
+                "email":"",
+                "website":""
+            },
+            "produces":[""],
+            "classification":[
+                "Producer"
+            ],
+            "status":"Certified"
+        },
+
+
+    ]
+}
+
+
+

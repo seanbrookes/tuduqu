@@ -1,0 +1,28 @@
+{
+	"name": "sf1",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"start": "node app",
+		"test": "make test"
+	},
+	"dependencies": {
+		"express": "3.0.x",
+		"connect-mongo": "0.2.x",
+		"mongoose":"3.4.x",
+		"passport":"0.1.x",
+		"sendgrid":"0.2.5",
+		"request":"2.12.x",
+		"bcrypt":"0.7.x",
+		"validator":"0.4.x",
+		"winston":"0.6.x"
+	},
+	"devDependencies": {
+		"mocha":"1.7.x",
+		"should":"1.2.x"
+	},
+	"engines":{
+		"npm":"1.1.x",
+		"node":"0.8.x"
+	}
+}
