@@ -255,7 +255,7 @@ http.createServer(app).listen(app.get('port'), function(){
 	var mongoOptions = { db: { safe: true }};
 
 // Makes connection asynchronously.  Mongoose will queue up database
-// operations and release them when the connection is complete.
+// operations and release them when the connectiomongodb://<dbuser>:<dbpassword>@ds049467.mongolab.com:49467/heroku_app11348892n is complete.
 //	mongoose.connect(dbConString, mongoOptions, function (err, res) {
 //		if (err) {
 //			console.log ('ERROR connecting to : ' + dbConString + '. ' + err);
