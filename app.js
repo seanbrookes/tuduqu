@@ -19,7 +19,7 @@ var express = require('express')
 //	, producers = require('./routes/producers')
 	, http = require('http')
 	, path = require('path')
-	, MongoStore = require('connect-mongo')(express)
+//	, MongoStore = require('connect-mongo')(express)
 	, mongoose = require('mongoose')
 	, winston = require('winston');
 var events = require('events');
@@ -67,9 +67,9 @@ app.configure(function(){
 	app.use(express.cookieParser('the secret string'));
 	app.use(express.session({
 		//maxAge: new Date(Date.now() + 3600000),
-		store: new MongoStore({
-			db: config.db.db
-		}),
+//		store: new MongoStore({
+//			db: config.db.db
+//		}),
 		secret: config.salt,
 		cookie: {
 			path     : '/',
