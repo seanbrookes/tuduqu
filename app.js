@@ -7,6 +7,8 @@
  *
  * TODO - parameterize index.html properties
  *
+ *
+ * 		"connect-mongo": "0.2.x",
  */
 var express = require('express')
 //, config = require('./config')
