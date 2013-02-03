@@ -13,7 +13,7 @@ var iaI18n = (function(){
 
 	var strings = function(){
 		// get the users locale
-		log('in IA translation method user locale: ' + SF.userLocale );
+		log('in IA translation method user locale: ' + sf1.getUserLocale() );
 		//return
 	};
 

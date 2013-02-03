@@ -13,12 +13,12 @@ require(
 		var that = this;
 		bindEventListeners();
 
-		log('IA module loaded ');
-		log('user locale: ' + SF.userLocale());
+		sf1.log('IA module loaded ');
+		sf1.log('user locale: ' + sf1.getUserLocale());
 		var anchorSelector = '#TemplateContainer';
 		_.templateSettings.variable = 'P';
 		init();
-		SF.EventBus.trigger('ia.templatesLoaded');
+		sf1.EventBus.trigger('ia.templatesLoaded');
 
 
 		//var iaModule = (function(exports,$){
@@ -69,8 +69,8 @@ require(
 							value:'baseI18n.k18Home'
 						}
 					],
-					title:SF.T(iaI18n.k18Home),
-					name:SF.T(iaI18n.k18Home)
+					title:sf1.translate(iaI18n.k18Home),
+					name:sf1.translate(iaI18n.k18Home)
 				});
 				/*
 				 *
@@ -92,8 +92,8 @@ require(
 						}
 					],
 					href:'#admin',
-					title:SF.T(iaI18n.k18Admin),
-					name:SF.T(iaI18n.k18Admin)
+					title:sf1.translate(iaI18n.k18Admin),
+					name:sf1.translate(iaI18n.k18Admin)
 				});
 				/*
 				 *
@@ -116,8 +116,8 @@ require(
 						}
 					],
 					href:'#login',
-					title:SF.T(iaI18n.k18Login),
-					name:SF.T(iaI18n.k18Login)
+					title:sf1.translate(iaI18n.k18Login),
+					name:sf1.translate(iaI18n.k18Login)
 				});
 				/*
 				 *
@@ -139,8 +139,8 @@ require(
 							value:'iaI18n.k18SignUp'
 						}
 					],
-					title:SF.T(iaI18n.k18SignUp),
-					name:SF.T(iaI18n.k18SignUp)
+					title:sf1.translate(iaI18n.k18SignUp),
+					name:sf1.translate(iaI18n.k18SignUp)
 
 				});
 
@@ -149,17 +149,17 @@ require(
 			}
 
 		function bindEventListeners(){
-			SF.EventBus.bind('ia.templatesLoaded',function(event){
+			sf1.EventBus.bind('ia.templatesLoaded',function(event){
 				// init main navigation
-				SF.EventBus.trigger('ia.renderMainNav');
+				sf1.EventBus.trigger('ia.renderMainNav');
 			});
-			SF.EventBus.bind('ia.renderMainNav',function(event){
+			sf1.EventBus.bind('ia.renderMainNav',function(event){
 				// init main navigation
 				_.templateSettings.variable = "P";
 				var templateData = getMainNavMenuData();
 
 
-				log('Render main nav view');
+				sf1.log('Render main nav view');
 //		var signUpFormMarkup = $('script#SignUpTemplate').html();
 //		var textE = $('script#OrganizationListTemplate').html();
 
@@ -167,8 +167,8 @@ require(
 				var itemTemplate = _.template($('script#MainNavItemTemplate').html());
 
 				$('.main-content header').html(template( templateData ));
-				SF.EventBus.trigger('ia.mainNavRendered');
-				SF.EventBus.trigger('checkauth-event');
+				sf1.EventBus.trigger('ia.mainNavRendered');
+				sf1.EventBus.trigger('checkauth-event');
 			});
 
 		}

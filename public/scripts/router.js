@@ -12,14 +12,15 @@ var AppRouter = Backbone.Router.extend({
 	routes:{
 		"":"index",
 		"home":"index",
+		"in":"input",
 		"login":"login",
 		"signup":"signup",
 		"admin":"admin"
 	},
 
 	index:function () {
-		log('index');
-		SF.EventBus.trigger('route-event',{route:'index'});
+		sf1.log('index');
+		sf1.EventBus.trigger('route-event',{route:'index'});
 		require(['../modules/index/index-module'],function(module){
 			module.init();
 		});
@@ -28,22 +29,31 @@ var AppRouter = Backbone.Router.extend({
 
 
 	signup:function () {
-		log('signup route');
-		SF.EventBus.trigger('route-event',{route:'signup'});
+		sf1.log('signup route');
+		sf1.EventBus.trigger('route-event',{route:'signup'});
 		securityModule.initSignup();
 
 	},
 
+	input:function () {
+		sf1.log('input route');
+		require(['../modules/input/input-module'],function(module){
+			module.init();
+			module.render();
+		});
+
+	},
+
 	login:function () {
-		log('login route');
-		SF.EventBus.trigger('route-event',{route:'login'});
+		sf1.log('login route');
+		sf1.EventBus.trigger('route-event',{route:'login'});
 		securityModule.initLogin();
 
 	},
 
 	admin:function () {
-		log('admin route');
-		SF.EventBus.trigger('route-event',{route:'admin'});
+		sf1.log('admin route');
+		sf1.EventBus.trigger('route-event',{route:'admin'});
 		require(['../modules/admin/admin-module'],function(module){
 			module.init();
 		});
@@ -63,8 +73,8 @@ $(document).ready(function(){
 
 	//iaModule.init();
 
-	SF.EventBus.bind('route-event',function(event){
-		log('router - route-event detected');
+	sf1.EventBus.bind('route-event',function(event){
+		sf1.log('router - route-event detected');
 	});
 
 

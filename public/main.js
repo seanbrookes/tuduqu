@@ -22,28 +22,11 @@
  */
 
 require(
-	['scripts/client-app','modules/security/security-module','modules/ia/ia-module','scripts/router'],
-	function(client,security,ia,i18n,router) {
+	['modules/security/security-module','modules/ia/ia-module','scripts/router'],
+	function(security,ia,router) {
 
 		//App.initialize();
-		(function(exports){
-			var sf1 = {};
 
-			sf1.io = Object.create({});
-			sf1.io.ajax = function(ioObj){
-				if (ioObj){
-					// check if there is an ajax request type and other properties
-					// make sure the required parameters (url and type are there )
-					$.ajax(ioObj);
-					log('in sfo.io.ajax');
-					log(ioObj);
-
-
-				}
-			};
-
-			exports.sf1 = sf1;
-		}(window));
 
 	}
 );

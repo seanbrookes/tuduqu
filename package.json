@@ -15,7 +15,8 @@
 		"bcrypt":"0.7.x",
 		"validator":"0.4.x",
 		"winston":"0.6.x",
-		"mongodb" : "1.1.x"
+		"mongodb" : "1.1.x",
+		"jsdom" : "0.3.x"
 	},
 	"devDependencies": {
 		"mocha":"1.7.x",

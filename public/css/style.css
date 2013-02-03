@@ -6,7 +6,7 @@ body {
     font-size: 95.5%;
     font-family: "Trebuchet MS", Arial, Tahoma, sans-serif;
     color: #dfdfdf;
-    background: #fff url('images/body-bg.jpg') 0px 0px repeat;
+    background-color:#19469D;
     padding-top: 10px;
 }
 
@@ -312,4 +312,13 @@ ul{
 .base{
     border:1px solid #2F6FAD;
     border-radius:3px;
+}
+/*
+
+tuduqu
+
+
+*/
+.ui-input{
+    width:600px;
 }

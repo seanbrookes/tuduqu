@@ -17,9 +17,9 @@ var securityModule = (function(exports,$){
 
 
 		$(anchorSelector).load('modules/security/security-template.html',function(markup){
-			log('Security module loaded ');
+			sf1.log('Security module loaded ');
 			_.templateSettings.variable = 'P';
-			SF.EventBus.trigger('security.templatesLoaded');
+			sf1.EventBus.trigger('security.templatesLoaded');
 
 			if (cb){
 				cb();
@@ -28,19 +28,19 @@ var securityModule = (function(exports,$){
 		});
 	}
 
-	SF.EventBus.bind('route-event',function(event){
-		//$(SF.EventBus).trigger('checkauth-event');
-		log('route-event fired - security module');
+	sf1.EventBus.bind('route-event',function(event){
+		//$(sf1.EventBus).trigger('checkauth-event');
+		sf1.log('route-event fired - security module');
 
 	});
 
-	SF.EventBus.bind('ia.mainNavRendered',function(event){
-		log('ia.mainNavRendered');
+	sf1.EventBus.bind('ia.mainNavRendered',function(event){
+		sf1.log('ia.mainNavRendered');
 		$.ajax({
 			type:'GET',
 			url:'/isauth',
 			success:function(response){
-				log(response);
+				sf1.log(response);
 				/*
 				 *
 				 * tighten this up (event pub/sub)
@@ -50,11 +50,11 @@ var securityModule = (function(exports,$){
 					$('.cmd-auth').text('hello ' + response.userName + ' (logout)');
 					$('.cmd-auth').click(function(event){
 						event.preventDefault();
-						SF.EventBus.trigger('logout-event');
+						sf1.EventBus.trigger('logout-event');
 					});
 				}
 				else{
-					SF.EventBus.trigger('route-event',{route:'login'});
+					sf1.EventBus.trigger('route-event',{route:'login'});
 					$('.cmd-auth').text('login');
 					$('.cmd-auth').click(function(event){
 						event.preventDefault();
@@ -63,17 +63,17 @@ var securityModule = (function(exports,$){
 				}
 			},
 			error:function(response){
-				log(response);
+				sf1.log(response);
 			}
 		});
 	});
-	SF.EventBus.bind('checkauth-event',function(event){
-		log('inside check auth event');
+	sf1.EventBus.bind('checkauth-event',function(event){
+		sf1.log('inside check auth event');
 		$.ajax({
 			type:'GET',
 			url:'/isauth',
 			success:function(response){
-				log(response);
+				sf1.log(response);
 				/*
 				 *
 				 * tighten this up (event pub/sub)
@@ -83,11 +83,11 @@ var securityModule = (function(exports,$){
 					$('.cmd-auth').text('hello ' + response.userName + ' (logout)');
 					$('.cmd-auth').click(function(event){
 						event.preventDefault();
-						SF.EventBus.trigger('logout-event');
+						sf1.EventBus.trigger('logout-event');
 					});
 				}
 				else{
-					SF.EventBus.trigger('route-event',{route:'login'});
+					sf1.EventBus.trigger('route-event',{route:'login'});
 					$('.cmd-auth').text('login');
 					$('.cmd-auth').click(function(event){
 						event.preventDefault();
@@ -96,26 +96,26 @@ var securityModule = (function(exports,$){
 				}
 			},
 			error:function(response){
-				log(response);
+				sf1.log(response);
 			}
 		});
 	});
-	SF.EventBus.bind('logout-event',function(event){
+	sf1.EventBus.bind('logout-event',function(event){
 		$.ajax({
 			type:'GET',
 			url:'/logout',
 			success:function(response){
-				log(response);
+				sf1.log(response);
 				if (response.isAuthenticated){
 					$('.cmd-auth').text('hello ' + response.userName + ' (logout)');
 					$('.cmd-auth').click(function(event){
 						event.preventDefault();
-						SF.EventBus.trigger('logout-event');
+						sf1.EventBus.trigger('logout-event');
 					});
 				}
 				else{
 
-					SF.EventBus.trigger('route-event',{route:'login'});
+					sf1.EventBus.trigger('route-event',{route:'login'});
 					$('.cmd-auth').text('login');
 					$('.cmd-auth').click(function(event){
 						event.preventDefault();
@@ -124,53 +124,53 @@ var securityModule = (function(exports,$){
 				}
 			},
 			error:function(response){
-				log(response);
+				sf1.log(response);
 			}
 		});
 	});
-	SF.EventBus.bind('route-event',function(event){
+	sf1.EventBus.bind('route-event',function(event){
 		if (event.route === 'login'){
-			//log('LOGIN ROUTE EVENT DETECTED');
+			//sf1.log('LOGIN ROUTE EVENT DETECTED');
 		}
 	});
-	SF.EventBus.bind('security.templatesLoaded',function(){
+	sf1.EventBus.bind('security.templatesLoaded',function(){
 
-		log('Security template loaded');
+		sf1.log('Security template loaded');
 		//isTemplateMarkupLoaded = true;
 
 	});
 
-	SF.EventBus.bind('main-nav-event',function(){
+	sf1.EventBus.bind('main-nav-event',function(){
 		//isTemplateMarkupLoaded = false;
-		log('Reset Security Template loaded');
+		sf1.log('Reset Security Template loaded');
 	});
 	/*
 
 		Init Sign Up View
 
 	 */
-	SF.EventBus.bind('security.signUpViewLoaded',function(){
+	sf1.EventBus.bind('security.signUpViewLoaded',function(){
 		$('.btn-signup').click(function(event){
 			event.preventDefault();
-			log('sumbit sign up form');
+			sf1.log('sumbit sign up form');
 			var signUpRequestModel = {};
 			// signUpRequestModel.userName = $('.form-signup #UserName').val();
 			signUpRequestModel.email = $('.form-signup #Email').val();
 			signUpRequestModel.password = $('.form-signup #Password').val();
-			log('signUpRequestModel populated: ' + JSON.stringify(signUpRequestModel));
+			sf1.log('signUpRequestModel populated: ' + JSON.stringify(signUpRequestModel));
 			$.ajax({
 				type:'POST',
 				url:'/user',
 				data:signUpRequestModel,
 				success:function(response){
-					log('success sign up');
-					log(response);
-					log(JSON.stringify(response));
+					sf1.log('success sign up');
+					sf1.log(response);
+					sf1.log(JSON.stringify(response));
 				},
 				error:function(response){
-					log('error sign up');
-					log(response);
-					log(JSON.stringify(response));
+					sf1.log('error sign up');
+					sf1.log(response);
+					sf1.log(JSON.stringify(response));
 				}
 
 			});
@@ -183,7 +183,7 @@ var securityModule = (function(exports,$){
 	 Init Sign Up View
 
 	 */
-	SF.EventBus.bind('security.loginViewLoaded',function(){
+	sf1.EventBus.bind('security.loginViewLoaded',function(){
 
 		var loginButton = $('.btn-login');
 
@@ -196,7 +196,7 @@ var securityModule = (function(exports,$){
 		* */
 		loginButton.click(function(event){
 			event.preventDefault();
-			log('sumbit login form');
+			sf1.log('sumbit login form');
 			var loginRequestModel = {};
 			loginRequestModel.email = $('.form-login #Email').val();
 			loginRequestModel.password = $('.form-login #Password').val();
@@ -210,23 +210,23 @@ var securityModule = (function(exports,$){
 					*
 					* make sure the use is authenticated
 					* */
-					log(JSON.stringify(response));
+					sf1.log(JSON.stringify(response));
 					if (response.isAuthenticated){
 						document.location.href = '/';
 					}
 				},
 				error:function(response){
-					log('error login');
-					log(response);
-					log(JSON.stringify(response));
+					sf1.log('error login');
+					sf1.log(response);
+					sf1.log(JSON.stringify(response));
 				}
 
 			});
 		});
 	});
 
-	SF.EventBus.bind('security.initSignUpView',function(){
-		log('Initialize Sign Up View');
+	sf1.EventBus.bind('security.initSignUpView',function(){
+		sf1.log('Initialize Sign Up View');
 
 //		var signUpFormMarkup = $('script#SignUpTemplate').html();
 //		var textE = $('script#OrganizationListTemplate').html();
@@ -239,10 +239,10 @@ var securityModule = (function(exports,$){
 			template( templateData )
 		);
 
-		SF.EventBus.trigger('security.signUpViewLoaded');
+		sf1.EventBus.trigger('security.signUpViewLoaded');
 	});
-	SF.EventBus.bind('security.initLoginView',function(){
-		log('Initialize login View');
+	sf1.EventBus.bind('security.initLoginView',function(){
+		sf1.log('Initialize login View');
 
 
 
@@ -256,7 +256,7 @@ var securityModule = (function(exports,$){
 		$('.security-module-container').html(
 			template( templateData )
 		);
-		SF.EventBus.trigger('security.loginViewLoaded');
+		sf1.EventBus.trigger('security.loginViewLoaded');
 	});
 
 
@@ -265,28 +265,28 @@ var securityModule = (function(exports,$){
 			return init(callback);
 		},
 		initSignup:function(){
-			log('|');
-			log('initSignup');
-			log('|');
+			sf1.log('|');
+			sf1.log('initSignup');
+			sf1.log('|');
 			if ($('script#SignUpTemplate').html()){
-				SF.EventBus.trigger('security.initSignUpView');
+				sf1.EventBus.trigger('security.initSignUpView');
 			}
 			else{
 				this.init(function(){
-					SF.EventBus.trigger('security.initSignUpView');
+					sf1.EventBus.trigger('security.initSignUpView');
 				});
 			}
 		},
 		initLogin:function(){
-			log('|');
-			log('initLogin');
-			log('|');
+			sf1.log('|');
+			sf1.log('initLogin');
+			sf1.log('|');
 			if ($('script#LoginFormTemplate').html()){
-				SF.EventBus.trigger('security.initLoginView');
+				sf1.EventBus.trigger('security.initLoginView');
 			}
 			else{
 				this.init(function(){
-					SF.EventBus.trigger('security.initLoginView');
+					sf1.EventBus.trigger('security.initLoginView');
 				});
 			}
 		},

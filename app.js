@@ -7,14 +7,16 @@
  *
  * TODO - parameterize index.html properties
  *
- *
+ *http://tuduqu.herokuapp.com/
  * 		"connect-mongo": "0.2.x",
  */
 var express = require('express')
 //, config = require('./config')
 	, routes = require('./routes')
 	, user = require('./routes/user')
+	, input = require('./routes/input')
 	, admin = require('./routes/admin')
+	, content = require('./routes/content')
 	, UserModel = require('./models/user-model')
 //	, geoizr = require('./routes/geoizr')
 //	, organization = require('./routes/organization')
@@ -221,6 +223,9 @@ app.get('/isauth',user.isUserAuth);
 app.post('/auth',user.postAuthenticate);
 app.post('/user',user.createUser);
 app.get('/pendingaccounts',admin.getPendingAccountList);
+app.post('/in',input.newURL);
+app.get('/urls',content.getAllURLs);
+app.get('/procurls',content.processURLs);
 
 http.createServer(app).listen(app.get('port'), function(){
 	console.log('|--------------------------------');
@@ -251,7 +256,7 @@ http.createServer(app).listen(app.get('port'), function(){
 		//dbConString = 'mongodb://heroku_app11348892:9dn7rqdmsda7qvto9g8v48ksg@ds049467.mongolab.com:49467/heroku_app11348892/';
 	});
 	dbConString = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || 'http://' + config.db.host + ':' + config.db.port +'/' + config.db.db;
-	console.log('dbConnString: ' + dbConString);
+	//console.log('dbConnString: ' + dbConString);
 // mongodb://heroku_app11348892:9dn7rqdmsda7qvto9g8v48ksg@ds049467.mongolab.com:49467/heroku_app11348892
 
 	var mongoOptions = { db: { safe: true }};
@@ -268,19 +273,18 @@ http.createServer(app).listen(app.get('port'), function(){
 //	});
 
 	var db = mongoose.connect(dbConString, mongoOptions ,function(err){
-		console.log('| - IN DEB CONNECTION ATTEMPT - SEAN LOOK HERE');
 		if(err){
 			console.log('|');
 			console.log('|');
-			console.log('--------------------------------');
+			console.log('|--------------------------------');
 			//console.log('|	' + dbConString + ' [db] connection error : ' + err);
 			console.log('|	 [db] connection error : ' + err);
-			console.log('--------------------------------');
+			console.log('|--------------------------------');
 			console.log('|');
 		}
 		else{
 			console.log('|');
-			console.log('|	Connected to db	');
+			console.log('|	Connected to db	[' + config.db.db + ']');
 			console.log('|');
 			console.log('|');
 		}
