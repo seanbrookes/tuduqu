@@ -10,6 +10,7 @@
  *
  * main file for interacting with contextual content
  *
+ * http://net.tutsplus.com/tutorials/javascript-ajax/how-to-scrape-web-pages-with-node-js-and-jquery/
  */
 var URL = require('../models/url-model')
 winston = require('winston');

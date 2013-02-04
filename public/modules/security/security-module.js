@@ -200,7 +200,7 @@ var securityModule = (function(exports,$){
 			var loginRequestModel = {};
 			loginRequestModel.email = $('.form-login #Email').val();
 			loginRequestModel.password = $('.form-login #Password').val();
-			$.ajax({
+			sf1.io.ajax({
 				type:'POST',
 				url:'/auth',
 				data:loginRequestModel,

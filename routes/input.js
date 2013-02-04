@@ -25,22 +25,32 @@ exports.newURL = function(req,res){
 	var reqURL = req.body.url;
 	var userID;
 
-	var url = {
+	var urlQueryObj = {
 		url: reqURL
 	};
-	var newURL = new URL(url);
-	console.log('exports.newURL: ' + reqURL);
-	logger.info(reqURL);
-	URL.findOne({url: reqURL}, function (err, existingURL) {
+	/*
+	*
+	* if user is authenticated save the userId with the url
+	* */
+	if (req.session.isAuthenticated){
+		urlQueryObj.userId = req.session.userId;
+	}
+
+	var newURL = new URL(urlQueryObj);
+	console.log('exports.newURL: ' + urlQueryObj.url);
+	logger.info(urlQueryObj.url);
+	var findOneQuery;
+
+	URL.findOne(urlQueryObj, function (err, existingURL) {
 		if (err){
 			logger.error('error checking if requested url exists: ' + err.message);
 			res.send({status:'error',responseText:'error checking if requested url exists: ' + err.message});
 		}
 		else{
 			// it is not found so can be created
-			console.log('existing url:  ' + existingURL);
+			//console.log('existing url doc:  ' + existingURL.url);
 			if (!existingURL){
-				console.log('BEGIN CREATE URL DOCUMENT FLOW: ' + newURL.url);
+				console.log('BEGIN CREATE URL DOCUMENT FLOW: ' + urlQueryObj.url);
 				// create the url
 				/*
 				 CREATE NEW USER - SAVE
@@ -85,7 +95,7 @@ exports.newURL = function(req,res){
 
 			}
 			else{
-				console.log('THIS URL IS ALREADY SAVED: ' + existingURL );
+				console.log('THIS URL IS ALREADY SAVED: ' + existingURL.url );
 			}
 		}
 

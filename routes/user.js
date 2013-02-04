@@ -12,13 +12,15 @@
  *  - http://crackstation.net/hashing-security.htm
  *
  *
+ * http://lostechies.com/derickbailey/2011/05/24/dont-do-role-based-authorization-checks-do-activity-based-checks/
+ *
  *  TODO stabilize the message structure back to the client
  *
  */
 
 var User = require('../models/user-model'),
 	PendingUser = require('../models/pendingUser-model'),
-  winston = require('winston');
+	winston = require('winston');
 
 var logger = new (winston.Logger)({
 	transports: [
@@ -58,19 +60,19 @@ exports.createUser = function(req, res){
 		var newUser = new User(user);
 		newUser.accountStatus = 'pending';
 		/*
-		* test to see if the user already exists before creating
-		*
-		* USER EXIST ALREADY?
-		*
-		* test to see if user was created - create the user
-		*
-		* */
+		 * test to see if the user already exists before creating
+		 *
+		 * USER EXIST ALREADY?
+		 *
+		 * test to see if user was created - create the user
+		 *
+		 * */
 		User.findOne({email: req.body.email}, function (err, existingUser) {
 			if (!err) {
 
 				if (!existingUser) {
 					/*
-						CREATE NEW USER - SAVE
+					 CREATE NEW USER - SAVE
 					 */
 					newUser.save(function(err) {
 						if (err) {
@@ -88,9 +90,9 @@ exports.createUser = function(req, res){
 							}
 							/*
 
-							we have created and saved user [pending activation]
+							 we have created and saved user [pending activation]
 
-							  */
+							 */
 							logger.info('new user successfully created [pending activation]: ' + newUser.userName);
 							/**
 							 * create a pending user token
@@ -127,7 +129,7 @@ exports.createUser = function(req, res){
 			}
 			else{
 				logger.error('ERROR trying see if a user exists: ' + err.message);
-				 // TODO wrap this with more established message structure to the client
+				// TODO wrap this with more established message structure to the client
 				res.send(400);
 			}
 		});
@@ -186,51 +188,23 @@ exports.postAuthenticate = function(req, res){
 					if (!err){
 						// make sure there is a user
 						if (user){
+							console.log('THIS USER IS LOGGED IN: ' + user);
 							req.session.isAuthenticated = true;
 							req.session.userName = user.userName;
 							req.session.userId = user._id;
-
-							if (exports.isUserAuth(req)) {
-								console.log('user successfully authenticated: ' + req.session.userName);
-								logger.info('user successfully authenticated: ' + req.session.userName);
-
-								// TODO - message content and structure
-								res.send({
-									isAuthenticated: req.session.isAuthenticated,
-									userName:req.session.userName,
-									userId:req.session.userId
-								});
-							} else {
-
-								// TODO - message content and structure
-								logger.info('user failed session initialization: ' + user);
-								res.send({ isAuthenticated: false});
-							}
-
+							console.log('Session User Name: ' + req.session.userName);
+							console.log('Session object: ' + JSON.stringify(req.session));
+							//res.send('LOGGED IN');
+							exports.isUserAuth(req, res);
 						}
 						// no user but no error
 						else{
-							logger.warn('User.getAuthenticated no error but also missing user object ' + User.printReason(reason));
 							console.log('exports.postAuthenticate - no user returned on auth - reason: ' + User.printReason(reason));
-							/**
-							 * defensively try to ensure there is no ambiguity as to authentication status in the client
-							 *
-							 * wrap in try catch as there may be a reason req.session doesn't exist (javascript turned off / other security feature?)
-							 */
-							try{
-								req.session.isAuthenticated = true;
-							}
-							catch(e){
-								logger.error('User.getAuthenticated exception attempting to force req.session.isAuthenticated to false on unsuccessful login attempt');
-							}
-							res.send({isAuthenticated:false,reason:'account not activated'});
 						}
 					}
 					// auth attempt threw an error
 					else{
 						console.log('exports.postAuthenticate - error during auth attempt: ' + err.message);
-						logger.error('exports.postAuthenticate - error during auth attempt: ' + err);
-						res.send(400);
 					}
 
 
@@ -264,10 +238,10 @@ exports.postAuthenticate = function(req, res){
 };
 
 /*
-*
-* check if user is authenticated
-*
-* */
+ *
+ * check if user is authenticated
+ *
+ * */
 /**
  * isUserAuth
  *
@@ -276,8 +250,19 @@ exports.postAuthenticate = function(req, res){
  * @param req
  * @return {Boolean}
  */
- exports.isUserAuth = function(req){
-	return req.session.isAuthenticated ? true : false;
+exports.isUserAuth = function(req,res){
+	console.log('exports.isUserAuth - COOKIE: ' + JSON.stringify(req.session));
+	if (!req.session.userName) {
+		// if false render login page
+		res.send({ isAuthenticated: false});
+	} else {
+		// if true redirect to member page
+		res.send({
+			isAuthenticated: req.session.isAuthenticated,
+			userName:req.session.userName,
+			userId:req.session.userId
+		});
+	}
 };
 /*
  *

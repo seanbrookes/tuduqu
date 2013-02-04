@@ -73,9 +73,9 @@ define(
 				if (urlVal){
 					// submit the url
 					sf1.log('URL to post: ' + urlVal);
-
 					var contentSubmissionObj = {};
 					contentSubmissionObj.url = urlVal;
+
 					// TODO - put some logic to determine if user is logged in and add user info to post object
 					sf1.io.ajax({
 						type:'post',
