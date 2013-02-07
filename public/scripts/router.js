@@ -21,8 +21,11 @@ var AppRouter = Backbone.Router.extend({
 	index:function () {
 		sf1.log('index');
 		sf1.EventBus.trigger('route-event',{route:'index'});
-		require(['../modules/index/index-module'],function(module){
-			module.init();
+		require(['../modules/index/index-module','../modules/input/input-module'],function(indexMod, inputMod){
+			indexMod.init();
+			indexMod.render();
+			inputMod.init();
+			inputMod.render();
 		});
 		//indexModule.init();
 	},

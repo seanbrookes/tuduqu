@@ -57,3 +57,16 @@
 {"level":"info","message":"exports.getPendingAccountList we have accounts ","timestamp":"2013-01-25T07:50:20.449Z"}
 {"level":"info","message":"exports.getPendingAccountList we have accounts ","timestamp":"2013-01-25T07:51:10.524Z"}
 {"level":"info","message":"exports.getPendingAccountList we have accounts ","timestamp":"2013-01-26T07:24:44.836Z"}
+{"level":"info","message":"createUser request","timestamp":"2013-02-03T19:37:37.303Z"}
+{"level":"info","message":"new user successfully created [pending activation]: seanbrookes@beachair.ca","timestamp":"2013-02-03T19:37:37.821Z"}
+{"level":"info","message":"login attempt","timestamp":"2013-02-03T19:46:10.862Z"}
+{"level":"info","message":"login attempt","timestamp":"2013-02-03T19:48:04.326Z"}
+{"level":"info","message":"login attempt","timestamp":"2013-02-03T19:50:29.233Z"}
+{"level":"info","message":"login attempt","timestamp":"2013-02-03T19:52:15.696Z"}
+{"level":"info","message":"login attempt","timestamp":"2013-02-03T19:55:37.713Z"}
+{"level":"info","message":"login attempt","timestamp":"2013-02-03T20:15:11.189Z"}
+{"level":"info","message":"login attempt","timestamp":"2013-02-03T20:18:38.929Z"}
+{"level":"info","message":"login attempt","timestamp":"2013-02-03T21:08:48.766Z"}
+{"level":"info","message":"login attempt","timestamp":"2013-02-03T21:14:02.311Z"}
+{"level":"info","message":"login attempt","timestamp":"2013-02-04T00:03:52.467Z"}
+{"level":"info","message":"login attempt","timestamp":"2013-02-04T00:19:14.730Z"}

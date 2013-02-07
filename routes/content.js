@@ -30,7 +30,17 @@ var logger = new (winston.Logger)({
 });
 exports.getAllURLs = function(req, res){
 
-	URL.find(function(err,dox){
+//	URL.find(function(err,dox){
+//		if (!err){
+//			logger.info('returning list of urls');
+//			res.send({status:'success',response:dox});
+//		}
+//		else{
+//			logger.error('error getting list of urls: ' + err.message);
+//			res.send(400);
+//		}
+//	});
+	URL.find().sort('-created').execFind(function(err,dox){
 		if (!err){
 			logger.info('returning list of urls');
 			res.send({status:'success',response:dox});
@@ -40,7 +50,6 @@ exports.getAllURLs = function(req, res){
 			res.send(400);
 		}
 	});
-
 
 };
 

@@ -51,7 +51,7 @@ define(
 
 		function render(){
 			var formMarkup = $('#URLFormContainer').html();
-			$('.main-content-wrapper').html(formMarkup);
+			$('.main-content-wrapper').after(formMarkup);
 			bindEventListeners();
 			sf1.log('render input form');
 			$('.btn-submit-url').click(function(event){
@@ -84,6 +84,7 @@ define(
 						success:function(response){
 							sf1.log('successful in post');
 							sf1.log(response);
+							sf1.EventBus.trigger('url.addNewUrl');
 						},
 						error:function(response){
 							sf1.log('error posting input: ');
