@@ -6,36 +6,13 @@
 	#container {
 		width: 100%;
 	}
-	#OrganizationForm #aligned {
-		width: 100%;
-		float: none;
-		display: block;
-	}
-	#OrganizationForm #Aside {
-		width: 100%;
-		display: block;
-		float: none;
-	}
-	#OrganizationForm .txtinput, #OrganizationForm textarea {
-		width: 85%;
-	}
-	#PriorityCase {
-		float: left;
-		display: block;
-	}
-	#RecipientCase {
-		float: left;
-		display: block;
-		margin-right: 55px;
-	}
+
 }
 
 
 /* smaller screen dropoff *******/
 @media only screen and (max-width: 550px) {
- 	#OrganizationForm .txtinput, #OrganizationForm textarea {
-		width: 80%;
-	}
+
 }
 
 /* iPhone Landscape ********/
@@ -43,9 +20,7 @@
 	body {
 		padding: 10px 0px;
 	}
-	select.selmenu {
-		width: 190px;
-	}
+
 }
 
 /* iPhone portrait *******/
@@ -53,16 +28,5 @@
 	body {
 		padding: 10px 0px;
 	}
- 	#OrganizationForm .txtinput, #OrganizationForm textarea {
-		width: 70%;
-	}
-	#OrganizationForm #aligned {
-		overflow: hidden;
-	}
-	select.selmenu {
-		width: 160px;
-	}
-	#RecipientCase {
-		margin-right: 30px;
-	}
+
 }

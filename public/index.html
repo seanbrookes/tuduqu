@@ -1,49 +1,46 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <meta charset="utf-8">
-        <!--
-            TODO - resolve the viewport meta tag overlap
-        -->
-        <meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1.0">
-        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-        <title>tuduqu</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width">
+
+        <title>tuduqu</title>
 
         <!--
             TODO - resolve to one stylesheet for the base app
         -->
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" type="text/css" media="all" href="css/responsive.css">
+
     </head>
 
     <body >
 
         <!-- Body Markup -->
-        <div class="main-content ui-container">
-            <header class="page-header">
+        <div class="viewport ui-container">
 
+            <header class="page-header"></header>
 
-            </header>
             <div class="main-content-wrapper ui-container">
 
+                   <!-- application content goes here -->
 
             </div>
+
         </div>
 
         <!-- DOM location for dynamically loaded template markup -->
         <div id="TemplateContainer"></div>
 
-
         <!-- Scripts -->
-
         <!-- jQuery -->
         <script type="text/javascript" src="scripts/lib/jquery-1.8.2.min.js"></script>
 
         <!-- jQuery plugins -->
         <script type="text/javascript" src="scripts/lib/plugins/jquery.cookie.js"></script>
         <script type="text/javascript" src="scripts/lib/plugins/jquery.prettydate.js"></script>
+        <script type="text/javascript" src="scripts/lib/plugins/trunk8.min.js"></script>
 
         <!-- Libraries -->
         <script type="text/javascript" src="scripts/lib/underscore.js"></script>

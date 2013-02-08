@@ -166,7 +166,7 @@ require(
 				var template = _.template($('script#MainNavTemplate').html());
 				var itemTemplate = _.template($('script#MainNavItemTemplate').html());
 
-				$('.main-content header').html(template( templateData ));
+				$('.viewport .page-header').html(template( templateData ));
 				sf1.EventBus.trigger('ia.mainNavRendered');
 				sf1.EventBus.trigger('checkauth-event');
 			});
