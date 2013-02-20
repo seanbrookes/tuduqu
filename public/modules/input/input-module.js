@@ -87,7 +87,6 @@ define(
 							sf1.EventBus.trigger('url.addNewUrl');
 							$('#URLInputField').val('');
 							$.gritter.add({
-								//class_name: 'gritter-light',
 								// (string | mandatory) the heading of the notification
 								title: 'Success',
 								// (string | mandatory) the text inside the notification
@@ -97,11 +96,23 @@ define(
 						error:function(response){
 							sf1.log('error posting input: ');
 							sf1.log(response);
+							$.gritter.add({
+								// (string | mandatory) the heading of the notification
+								title: 'Server Error',
+								// (string | mandatory) the text inside the notification
+								text: 'error saving url: ' + JSON.stringify(response)
+							});
 						}
 					})
 				}
 				else{
-					log('please input valid url. It must start with "http"');
+					sf1.log('Make sure the url is valid. It must start with "http"');
+					$.gritter.add({
+						// (string | mandatory) the heading of the notification
+						title: 'Warn',
+						// (string | mandatory) the text inside the notification
+						text: 'Make sure the url is valid. It must start with "http"'
+					});
 				}
 			});
 
