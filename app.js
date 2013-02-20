@@ -11,21 +11,18 @@
  * 		"connect-mongo": "0.2.x",
  */
 var express = require('express')
-//, config = require('./config')
 	, routes = require('./routes')
 	, user = require('./routes/user')
 	, input = require('./routes/input')
 	, admin = require('./routes/admin')
 	, content = require('./routes/content')
 	, UserModel = require('./models/user-model')
-//	, geoizr = require('./routes/geoizr')
-//	, organization = require('./routes/organization')
-//	, producers = require('./routes/producers')
 	, http = require('http')
 	, path = require('path')
 //	, MongoStore = require('connect-mongo')(express)
 	, mongoose = require('mongoose')
 	, winston = require('winston');
+
 var events = require('events');
 var EE = require('events').EventEmitter;
 var EventBus = new EE();
@@ -61,7 +58,7 @@ var app = express();
 //	console.log('[app.js] Caught- uncaught exception (try to keep application running): ' + err);
 //});
 app.configure(function(){
-	app.set('port', process.env.PORT || 3002);
+	app.set('port', process.env.PORT || 3003);
 	app.use(express.favicon());
 	app.use(express.logger('dev'));
 	app.use(express.bodyParser());
@@ -207,17 +204,6 @@ app.configure('development', function(){
 	//app.set('db-uri', 'mongodb://localhost:27017/plentyofood');
 });
 
-//app.get('/', routes.index);
-//app.get('/producers', producers.getFVOPAProducers);
-//app.get('/users', user.list);
-//app.get('/geoizr', geoizr.getGeoLocation);
-//app.post('/geoizr', geoizr.postGeoLocation);
-//app.get('/organization', organization.getOrganizations);
-//app.get('/organization/:id', organization.getOrganization);
-//app.post('/organization', organization.newOrganization);
-//app.put('/organization/:id', organization.updateOrganization);
-//app.delete('/organization/:id', organization.deleteOrganization);
-//
 app.get('/logout',user.logout);
 app.get('/isauth',user.isUserAuth);
 app.post('/auth',user.postAuthenticate);
@@ -294,17 +280,5 @@ http.createServer(app).listen(app.get('port'), function(){
 		console.log('|');
 
 	});
-//	var dbConnection = db.connections[0];
-//	function mongoStoreConnectionArgs(dbConnection) {
-//		return {
-//			dbname: dbConnection.db.databaseName,
-//			host: dbConnection.db.serverConfig.host,
-//			port: dbConnection.db.serverConfig.port//,
-////			username: db.uri.username,
-////			password: db.uri.password
-//		};
-//	}
-//	app.use(express.session({
-//		store: Session(mongoStoreConnectionArgs(dbConnection))
-//	}));
+
 });

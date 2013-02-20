@@ -69,8 +69,8 @@ define(
 				// validate
 				// post the form
 				sf1.log('Sumbit URL form');
-				var urlVal = $('#URLInputField').val();
-				if (urlVal){
+				var urlVal = $.trim($('#URLInputField').val());
+				if ((urlVal) && (urlVal.substr(0,4) === 'http')){
 					// submit the url
 					sf1.log('URL to post: ' + urlVal);
 					var contentSubmissionObj = {};
@@ -85,12 +85,23 @@ define(
 							sf1.log('successful in post');
 							sf1.log(response);
 							sf1.EventBus.trigger('url.addNewUrl');
+							$('#URLInputField').val('');
+							$.gritter.add({
+								//class_name: 'gritter-light',
+								// (string | mandatory) the heading of the notification
+								title: 'Success',
+								// (string | mandatory) the text inside the notification
+								text: 'The url was added successfully.'
+							});
 						},
 						error:function(response){
 							sf1.log('error posting input: ');
 							sf1.log(response);
 						}
 					})
+				}
+				else{
+					log('please input valid url. It must start with "http"');
 				}
 			});
 
