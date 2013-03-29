@@ -74,22 +74,21 @@ define(
 		var getRecentUrls = function(){
 			sf1.io.ajax({
 				type:'get',
+				//url:'/procurls',
 				url:'/urls',
 				success:function(response){
 					var resObj = response.response;
-					sf1.log('hell ya!');
 					sf1.log(resObj);
 					var outputMarkup = '';
 					for (var i = 0;i < resObj.length;i++){
 						var urlObj = resObj[i];
-						outputMarkup += '<li class="url-list-item"><span class="date-pretty" title="' + urlObj.created + '"> ' + urlObj.created + ' </span> - <a href="' + urlObj.url + '" target="_new"><span> ' + resObj[i].url + ' </span></a></li>';
+						outputMarkup += '<li class="url-list-item"><span class="date-pretty" title="' + urlObj.created + '"> ' + urlObj.created + ' </span> - <a href="' + urlObj.url + '" target="_new"><span> ' + urlObj.url + ' </span></a></li>';
 					}
 					$('.url-list').html(outputMarkup);
 					$('.url-list-item').trunk8();
 					$('span.date-pretty').prettyDate();
 				},
 				error:function(response){
-					sf1.log('hell no');
 					sf1.log(response);
 				}
 			});

@@ -58,6 +58,18 @@
 		sf1.log('translate this string key: ' + JSON.stringify(arguments) + '  with this locale value: ' + sf1.getUserLocale());
 		return arguments[0];
 	};
+	sf1.isUserAuth = function(){
+		if ($.cookie('isAuthenticated')){
+			var isAuthVal = $.cookie('isAuthenticated');
+			if (Boolean(isAuthVal) === true){
+				return true;
+			}
+			return false;
+		}
+		else{
+			return false;
+		}
+	};
 
 	exports.sf1 = sf1;
 

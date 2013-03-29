@@ -119,6 +119,10 @@ require(
 					title:sf1.translate(iaI18n.k18Login),
 					name:sf1.translate(iaI18n.k18Login)
 				});
+			// test to make sure the user is authenicated or not before rendering this nav item
+			// TODO - enhance the security to embed this logic
+			//if (!sf1.isUserAuth()){
+				sf1.log('user is not authenticated');
 				/*
 				 *
 				 * signup
@@ -143,6 +147,7 @@ require(
 					name:sf1.translate(iaI18n.k18SignUp)
 
 				});
+			//}
 
 				return templateData;
 

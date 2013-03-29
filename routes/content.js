@@ -42,7 +42,7 @@ exports.getAllURLs = function(req, res){
 //	});
 	URL.find().sort('-created').execFind(function(err,dox){
 		if (!err){
-			logger.info('returning list of urls');
+			logger.info('returning list of urls: ' + JSON.stringify(dox));
 			res.send({status:'success',response:dox});
 		}
 		else{
@@ -52,22 +52,24 @@ exports.getAllURLs = function(req, res){
 	});
 
 };
+function UrlResponseObj(){
 
+}
 exports.processURLs = function(req, res){
-	var titleArray = [];
-	var urlProcessCount = 0;
-	EventBus.on('content.processedURL',function(data){
-		logger.info('add page title to response stack: ' + data + '  title count: ' + titleArray.length);
-		titleArray.push(data);
-		if (titleArray.length === urlProcessCount){
-			logger.info('POST RESPONSE');
-			res.send({status:'success',response:titleArray});
-		}
 
+	var urlProcessCount = 0;
+	EventBus.on('content.processedURL',function(){
+		//logger.info('add page title to response stack: ' + data + '  title count: ' + titleArray.length);
+		//titleArray.push(data);
+		if (titleArray.length === urlProcessCount){
+
+			EventBus.emit('content.processedAllURLs');
+		}
 	});
 
 	EventBus.on('content.processedAllURLs',function(data){
-		res.send({status:'success',response:titleArray});
+		logger.info('POST RESPONSE');
+		res.send({status:'success',response:data});
 	});
 	URL.find(function(err,dox){
 		if (!err){
@@ -81,12 +83,17 @@ exports.processURLs = function(req, res){
 					var urlCount = dox.length;
 					urlProcessCount = urlCount;
 					var j = 0;
+					var titleArray = [];
 					for (j = 0;j < dox.length;j++){
-						var tuduURL = dox[j].url;
+						var urlObj = dox[j];
+						//var tuduURL = dox[j].url;
+						//var createdDate = dox[j].
 						var innerIndex = j;
 						//logger.info('processing: ' + tuduURL);
 
-						request({uri: tuduURL}, function(err, response, body){
+						var reqUrl = urlObj.url;
+						request({uri: urlObj.url}, function(err, response, body){
+							var urlObj2 = urlObj;
 							var self = this;
 							var innerIndex2 = innerIndex;
 							self.items = new Array();//I feel like I want to save my results in an array
@@ -101,17 +108,36 @@ exports.processURLs = function(req, res){
 								//Use jQuery just as in a regular HTML page
 								var $ = window.jQuery;
 								var title = $('title').text();
-								var bodyText = $(body).text();
+								var bodyScrapedText = $('body:not(:has(script))').html();
+								//logger.info('scraped text: ' + bodyScrapedText);
+							//	logger.info('html: ' + bodyElements);
+								var bodyText = $(bodyScrapedText).text();
 
 								//console.log('Page Title: ' + pageTitle);
-								logger.info('Page Title: ' + title);
-								logger.info('Page Text: ' + bodyText);
+
+								//logger.info('Page Text: ' + bodyText);
 								//res.end($('title').text());
 								// trigger event
 //								logger.info('|');
 //								logger.info('| EMIT title');
 //								logger.info('|');
-								EventBus.emit('content.processedURL',title);
+								//var responseObj = {};
+								//responseObj.url = urlObj.url;
+								urlObj2.title = title;
+								logger.info('Page Title: ' + urlObj2.title);
+								var xyz = Object.create(urlObj2);
+								var abc = new UrlResponseObj();
+								abc.title = urlObj2.title;
+								abc.url = reqUrl;
+								abc.created = urlObj2.created;
+								titleArray.push(abc);
+								if (titleArray.length === urlProcessCount){
+									logger.info('posting title array: ' + JSON.stringify(titleArray));
+									EventBus.emit('content.processedAllURLs', titleArray);
+
+								}
+
+							//	EventBus.emit('content.processedURL');
 
 
 //								if (innerIndex2 === (urlCount - 1)){

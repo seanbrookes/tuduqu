@@ -58,7 +58,7 @@ exports.createUser = function(req, res){
 			password: password
 		};
 		var newUser = new User(user);
-		newUser.accountStatus = 'pending';
+		newUser.accountStatus = 'active';
 		/*
 		 * test to see if the user already exists before creating
 		 *
@@ -86,14 +86,14 @@ exports.createUser = function(req, res){
 						User.findOne({ _id: newUser._id }, function(err, user) {
 							if (err) {
 								logger.error('ERROR looking for new user: ' + err.message);
-								res.send(400);
+								res.send(400,'ERROR looking for new user: ' + err.message);
 							}
 							/*
 
 							 we have created and saved user [pending activation]
 
 							 */
-							logger.info('new user successfully created [pending activation]: ' + newUser.userName);
+							logger.info('new user successfully created and activated: ' + newUser.userName);
 							/**
 							 * create a pending user token
 							 *
@@ -101,20 +101,21 @@ exports.createUser = function(req, res){
 							 * @type {PendingUser}
 							 *
 							 */
-							var pendingUser = new PendingUser({
-								userId:user._id,
-								token:getToken()
-							});
-
-							pendingUser.save(function(err){
-								if (err){
-									logger.error('save pending user token error: ' + err.message);
-									res.send(400);
-								}
-								logger.info('new user pending activation token record created: ' + user);
-								// TODO - wrap this with more protection - establish a consistent response message structure
-								res.send(user);
-							});
+                            // turn off acount acknowledgement for now
+//							var pendingUser = new PendingUser({
+//								userId:user._id,
+//								token:getToken()
+//							});
+//
+//							pendingUser.save(function(err){
+//								if (err){
+//									logger.error('save pending user token error: ' + err.message);
+//									res.send(400);
+//								}
+//								logger.info('new user pending activation token record created: ' + user);
+//								// TODO - wrap this with more protection - establish a consistent response message structure
+//								res.send(user);
+//							});
 
 
 						});
@@ -190,6 +191,9 @@ exports.postAuthenticate = function(req, res){
 						if (user){
 							console.log('THIS USER IS LOGGED IN: ' + user);
 							req.session.isAuthenticated = true;
+							res.cookie('isAuthenticated',true);
+							res.cookie('userName',user.userName);
+							res.cookie('userId',user._id);
 							req.session.userName = user.userName;
 							req.session.userId = user._id;
 							console.log('Session User Name: ' + req.session.userName);

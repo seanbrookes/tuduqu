@@ -34,6 +34,7 @@ exports.newURL = function(req,res){
 	* */
 	if (req.session.isAuthenticated){
 		urlQueryObj.userId = req.session.userId;
+		logger.info('user is authenticated so assigning user id to url submission');
 	}
 
 	var newURL = new URL(urlQueryObj);

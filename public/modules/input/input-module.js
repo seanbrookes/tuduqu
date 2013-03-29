@@ -75,6 +75,14 @@ define(
 					sf1.log('URL to post: ' + urlVal);
 					var contentSubmissionObj = {};
 					contentSubmissionObj.url = urlVal;
+					if (sf1.isUserAuth()){
+						try{
+							contentSubmissionObj.userId = $.cookie('userId');
+						}
+						catch(e){
+							sf1.log('error retrieving userId from cookie on url post: ' + e.message);
+						}
+					}
 
 					// TODO - put some logic to determine if user is logged in and add user info to post object
 					sf1.io.ajax({

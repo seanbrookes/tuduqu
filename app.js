@@ -230,8 +230,6 @@ http.createServer(app).listen(app.get('port'), function(){
 	//console.log('|	Initialize Db connection');
 	console.log('|');
 	var dbConString;
-//	var constring1 = 'http://' + config.db.host + ':' + config.db.port +'/' + config.db.db;
-//	var conString2 = 'mongodb://heroku_app11348892:9dn7rqdmsda7qvto9g8v48ksg@ds049467.mongolab.com:49467/heroku_app11348892/';
 
 	app.configure('development', function(){
 		dbConString = 'http://' + config.db.host + ':' + config.db.port +'/' + config.db.db;
@@ -239,24 +237,10 @@ http.createServer(app).listen(app.get('port'), function(){
 	});
 	app.configure('production', function(){
 		dbConString = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || 'http://' + config.db.host + ':' + config.db.port +'/' + config.db.db;
-		//dbConString = 'mongodb://heroku_app11348892:9dn7rqdmsda7qvto9g8v48ksg@ds049467.mongolab.com:49467/heroku_app11348892/';
 	});
 	dbConString = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || 'http://' + config.db.host + ':' + config.db.port +'/' + config.db.db;
-	//console.log('dbConnString: ' + dbConString);
-// mongodb://heroku_app11348892:9dn7rqdmsda7qvto9g8v48ksg@ds049467.mongolab.com:49467/heroku_app11348892
 
 	var mongoOptions = { db: { safe: true }};
-
-// Makes connection asynchronously.  Mongoose will queue up database
-// operations and release them when the connectiomongodb://<dbuser>:<dbpassword>@ds049467.mongolab.com:49467/heroku_app11348892n is complete.
-//	mongoose.connect(dbConString, mongoOptions, function (err, res) {
-//		if (err) {
-//			console.log ('ERROR connecting to : ' + dbConString + '. ' + err);
-//		} else {
-//			console.log ('Succeeded connected to : ddddd');
-//		//	console.log ('Succeeded connected to : ddddd' + dbConString);
-//		}
-//	});
 
 	var db = mongoose.connect(dbConString, mongoOptions ,function(err){
 		if(err){
